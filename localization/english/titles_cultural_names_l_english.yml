@@ -1,7 +1,7 @@
 l_english:
- cn_suomi:0 "Vena"
- cn_suomi_adj:0 "Venian"
- cn_suomi_pre:0 "Veno"
- cn_russa:0 "Russia"
- cn_russa_adj:0 "Russian"
- cn_russa_pre:0 "Russo"
+ cn_suomi: "Vena"
+ cn_suomi_adj: "Venian"
+ cn_suomi_pre: "Veno"
+ cn_russa: "Russia"
+ cn_russa_adj: "Russian"
+ cn_russa_pre: "Russo"

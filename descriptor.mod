@@ -6,3 +6,4 @@ tags={
 }
 name="Rus Immersive Mod"
 supported_version="1.6.*"
+remote_file_id="2856959890"
