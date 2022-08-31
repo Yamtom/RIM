@@ -1,6 +1,8 @@
-@correct_culture_primary_score = 100
+@correct_culture_primary_score = 100:0
 @better_than_the_alternatives_score = 50
 @always_primary_score = 1000
+
+# EMPIRES
 
 e_russia = {	#Kievan Rus
 	color = { 50 150 55 }
