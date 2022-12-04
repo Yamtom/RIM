@@ -27297,9 +27297,9 @@ e_russia = {	#Kievan Rus
 
 		cultural_names = {
 			name_list_norse = cn_gardariki
-			name_list_swedish = cn_gardariki
-			name_list_danish = cn_gardariki
-			name_list_norwegian = cn_gardariki
+			name_list_swedish = cn_holmgardr
+			name_list_danish = cn_holmgardr
+			name_list_norwegian = cn_holmgardr
 		}
 
 		d_novgorod = {

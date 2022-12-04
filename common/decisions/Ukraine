@@ -1,0 +1,109 @@
+#############################################
+# #Create Ukraine to the map				#
+#############################################
+create_ukraine_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	major = yes
+
+	ai_check_interval = 120
+
+	desc = create_ukraine_decision_desc
+	selection_tooltip = create_ukraine_decision_tooltip
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		OR = {
+			has_title = title:d_cherkassy
+			has_title = title:c_uman
+			has_title = title:c_korsun
+		}
+		OR = {
+			culture = culture:cornish
+			culture = { has_cultural_pillar = heritage_brythonic }
+		}
+		OR = {
+			OR = {
+				has_title = title:d_cherkassy
+				has_title = title:c_uman
+				has_title = title:c_korsun
+			} 
+			culture = culture:cornish	#Cornish characters are always able to dream.
+		} 
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_created_ukraine
+			}
+		}
+		OR = {
+			has_government = feudal_government
+			has_government = republic_government
+			has_government = clan_government
+		}
+		highest_held_title_tier <= tier_duchy
+		current_date >= 1066.01.01
+	}
+ 
+	is_valid = {
+		is_independent_ruler = yes
+		prestige_level >= high_prestige_level
+		OR = {
+			has_title = title:d_cherkassy
+			has_title = title:c_uman
+			has_title = title:c_korsun
+		}
+		AND = {
+			completely_controls = title:d_cherkassy
+			completely_controls = title:c_uman
+			completely_controls = title:c_korsun
+		} 
+		any_realm_province = {  
+			culture = { has_cultural_pillar = heritage_east_slavic }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			create_ukraine_decision_scripted_effect = yes
+		}
+		save_scope_as = founder
+		trigger_event = {
+			id = british_isles.4001
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = british_isles.4002
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_created_ukraine
+			}
+			set_global_variable = {
+				name = flag_created_ukraine
+				value = root
+			}
+		}
+	}
+
+	cost = {
+		gold = 100
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
