@@ -1,0 +1,77 @@
+﻿expand_galych_volhynia_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	major = yes
+
+	ai_check_interval = 120
+
+	desc = expand_galych_volhynia_decision_desc
+	selection_tooltip = expand_galych_volhynia_decision_tooltip
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		OR = {
+			has_title = title:k_galicia-volhynia
+			has_title = title:d_halych
+			has_title = title:d_volhynia
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_expanded_galych_volhynia
+			}
+			OR = {
+			has_title = title:e_russia
+			has_title = title:k_ruthenia
+			}
+		}
+		OR = {	
+			has_government = tribal_government
+			has_government = feudal_government
+		}
+		highest_held_title_tier >= tier_duchy
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		completely_controls = title:k_galicia-volhynia
+		completely_controls = title:d_kiev
+		completely_controls = title:d_turov
+		completely_controls = title:d_pinsk
+		completely_controls = title:d_grodno
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			expand_galych_volhynia_scripted_effect = yes
+		}
+		save_scope_as = founder
+		trigger_event = {
+			id = expand_galych_volhynia.0001
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_expanded_galych_volhynia
+			}
+		}
+	}
+
+	cost = {
+		gold = 300
+		prestige = 200
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

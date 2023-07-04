@@ -1,0 +1,24 @@
+﻿namespace = expand_galych_volhynia
+
+##################################################
+# Expand Galicia-Volhynia Major Decision Events
+# 0001
+##################################################
+
+expand_galych_volhynia.0001 = {
+	type = character_event
+	title = expand_galych_volhynia.0001.t
+	desc = expand_galych_volhynia.0001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:founder
+		animation = personality_honorable
+	}
+
+	immediate = { expand_galych_volhynia_scripted_effect = yes }
+
+	option = {
+		name = expand_galych_volhynia.0001.a
+		add_prestige = medium_prestige_gain
+	}
+}

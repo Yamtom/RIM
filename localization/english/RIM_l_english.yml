@@ -25,3 +25,37 @@
  cn_russa: "Russia" 
  cn_russa_adj: "Russian" 
  cn_russa_pre: "Russo"
+ e_russia:0 "Rus"
+ e_russia_adj:0 "Ruthian"
+ e_russia_pre:0 "Rutho"
+ russian:0 "Ruth"
+ russian_prefix:0 "Ruth"
+ russian_collective_noun:1 "Ruth"
+ # Unite Churches
+ unite_church.0001.t:0 "Churches are united"
+ unite_church.0001.desc:0 "Ruthenians should remain with that which was handed down to us in the Holy Scriptures, in the Gospel, and in the writings of the holy Greek Doctors, that is, that the Holy Spirit proceeds, not from two sources and not by a double procession, but from one origin, from the Father through the Son."
+ unite_church.0001.a:0 "Our future is ours to define!"
+ #Greek Catholic Church
+ greek_catholic:0 "Greek Catholic"
+ greek_catholic_adj:0 "Greek Catholic"
+ greek_catholic_adherent:0 "Greek Catholic"
+ greek_catholic_adherent_plural:0 "Greek Catholics"
+ greek_catholic_desc:0 "The Ukrainian Greek Catholic Church is a sui iuris Byzantine Rite Eastern Catholic church in full communion with the worldwide Catholic Church. The church is one of the successor churches to the acceptance of Christianity by Grand Prince Vladimir the Great of Kyiv, in 988."
+ holy_site_berestye_name:0 "$c_berestye$"
+ holy_site_berestye_effect_name:0 "From [holy_site|E]" #weak ($holy_site_berestye_name$)#!
+ 
+ # Expand Galicia-Volhynia
+ expand_galych_volhynia_decision:0 "Expand Galicia-Volhynia"
+ expand_galych_volhynia_decision_desc:0 "As Kyiv loses it's influence, new power comes to place."
+ expand_galych_volhynia_decision_tooltip:0 "Galicia-Volhynia expands to the east"
+ expand_galych_volhynia_decision_confirm:0 "Expand Galicia-Volhynia!"
+ # Unite Churches
+ unite_church_decision:0 "Unite Churches"
+ unite_church_decision_desc:0 "As we face new challenges our church should strengthen with new alliances."
+ unite_church_decision_tooltip:0 "Decide to unite greek and catholic churches"
+ unite_church_decision_confirm:0 "Unite Churches"
+ # Expand Galicia-Volhynia
+ expand_galych_volhynia.0001.t:0 "Galicia-Volhynia is expanded"
+ expand_galych_volhynia.0001.desc:0 "Come what may, [founder.GetPrimaryTitle.GetNameNoTierNoTooltip] shall endure, and shall grow to be greater and more glorious than ever before."
+ expand_galych_volhynia.0001.a:0 "Our future is ours to define!"
+ 

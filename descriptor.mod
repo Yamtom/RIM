@@ -1,9 +1,9 @@
-version="0.2"
+version="0.4"
 tags={
 	"Alternative History"
 	"Fixes"
 	"Historical"
 }
 name="Rus Immersive Mod"
-supported_version="1.6.*"
+supported_version="1.9.*"
 remote_file_id="2856959890"

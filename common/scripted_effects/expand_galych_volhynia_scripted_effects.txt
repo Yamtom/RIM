@@ -1,0 +1,14 @@
+﻿expand_galych_volhynia_scripted_effect = {
+	title:d_kiev = { set_de_jure_liege_title = title:k_galicia-volhynia }
+	title:d_turov = { set_de_jure_liege_title = title:k_galicia-volhynia }
+	title:d_pinsk = { set_de_jure_liege_title = title:k_galicia-volhynia }
+	title:d_grodno = { set_de_jure_liege_title = title:k_galicia-volhynia }
+	
+	hidden_effect = {
+		title:k_galicia-volhynia = { set_de_jure_liege_title = title:e_russia }
+		title:k_ruthenia = { set_capital_county = title:c_chernigov }
+		title:k_galicia-volhynia = { set_title_name = k_ruthenia }
+		title:k_ruthenia = { set_title_name = d_chernigov }
+		title:k_ruthenia = { set_coa = d_chernigov }
+	}
+}

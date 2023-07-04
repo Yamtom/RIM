@@ -1,0 +1,22 @@
+﻿unite_church_scripted_effect = {
+	faith:greek_catholic = {
+		change_fervor = {
+			value = 100
+			desc = fervour_gain_unexpected_resurgence
+		}
+	}
+	scope:religious_leader = {
+		# Switch to the new faith.
+		add_character_flag = {
+			flag = delay_player_faith_conversion_notification_event
+			days = 1
+		}
+		faith:greek_catholic = {
+			# Remove the restrictions on converting.
+			remove_variable = block_conversion_till_decision_taken
+		}
+		# Finally, convert.
+		## We do this here so that it's reformed by the time you switch (giving you a better chance with vassal conversion rates).
+		set_character_faith_with_conversion = faith:greek_catholic
+	}
+}

@@ -1,0 +1,91 @@
+﻿unite_church_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+	major = yes
+
+	ai_check_interval = 120
+
+	desc = unite_church_decision_desc
+	selection_tooltip = unite_church_decision_tooltip
+
+	is_shown = { 
+		is_landed = yes
+		exists = dynasty
+		capital = {
+			OR = {
+				geographical_region = world_europe_east
+				geographical_region = world_europe_south_east
+			}
+		}
+		highest_held_title_tier >= tier_duchy 
+		trigger_if = {
+			limit = { exists = faith.religious_head }
+			NOT = { this = faith.religious_head }
+		} 
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:united_church
+			}
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		piety_level >= medium_piety_level
+		OR = {
+			AND = {
+				faith = faith:orthodox
+				any_directly_owned_province = {
+					faith = faith:catholic 
+				} 
+				any_close_family_member = {
+					faith = faith:catholic 
+				} 
+			}
+			AND = {
+				faith = faith:catholic
+				any_directly_owned_province = {
+					faith = faith:orthodox
+				} 
+				any_close_family_member = {
+					faith = faith:orthodox 
+				}  
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_at_peace_adult = yes
+	}
+
+	effect = { 
+		save_scope_as = religious_leader
+		faith = { save_scope_as = old_faith }
+		faith:greek_catholic = { save_scope_as = greek_catholic_faith }
+		faith:greek_catholic.religious_head = { save_scope_as = pope }
+
+		show_as_tooltip = {
+			unite_church_scripted_effect = yes
+		} 
+		trigger_event = unite_church.0001
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:united_church
+			}
+		}
+	}
+
+	cost = {
+		piety = 300
+		prestige = 200
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
