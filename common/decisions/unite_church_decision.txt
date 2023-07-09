@@ -16,22 +16,7 @@
 				geographical_region = world_europe_south_east
 			}
 		}
-		highest_held_title_tier >= tier_duchy 
-		trigger_if = {
-			limit = { exists = faith.religious_head }
-			NOT = { this = faith.religious_head }
-		} 
-		NOT = {
-			is_target_in_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:united_church
-			}
-		}
-	}
-
-	is_valid = {
-		is_independent_ruler = yes
-		piety_level >= medium_piety_level
+		
 		OR = {
 			AND = {
 				faith = faith:orthodox
@@ -52,6 +37,22 @@
 				}  
 			}
 		}
+		highest_held_title_tier >= tier_duchy 
+		trigger_if = {
+			limit = { exists = faith.religious_head }
+			NOT = { this = faith.religious_head }
+		} 
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:united_church
+			}
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		piety_level >= medium_piety_level
 	}
 
 	is_valid_showing_failures_only = {

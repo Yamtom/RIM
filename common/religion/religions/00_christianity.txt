@@ -1191,5 +1191,80 @@
 				ReligiousHeadTitleName = orthodox_religious_head_title_name				
 			}
 		}
+		slavic_cristianity = {
+			color = { 0.7625 0.5325 0.45 }
+			religious_head = k_kyiv_patriarchy
+			icon = Christianity_custom_12
+			graphical_faith = "catholic_gfx"
+			
+			holy_site = jerusalem
+			holy_site = constantinople
+			holy_site = barlad
+			holy_site = kiev
+			holy_site = berestye
+
+			#Special Tolerance
+			doctrine = special_doctrine_ecumenical_christian
+
+			#Tenets
+			doctrine = tenet_communion
+			doctrine = tenet_ritual_celebrations
+			doctrine = tenet_monasticism
+
+			holy_order_names = {
+				{ name = "holy_order_guardians_of_divinerealm" }
+				{ name = "holy_order_faithful_of_highgod" }
+				{ name = "holy_order_order_of_saint_andrew" } #Святий Андрій - перший християнський апостол, який проповідував на території сучасної України.
+				{ name = "holy_order_nights_of_saint_volodymyr" } #Святий Володимир - князь, який хрестив Київську Русь і ввів християнство як державну релігію.
+			}
+
+			localization = { # Utilizes the 'West Christian' Saints, shared by Catholics and Orthodox
+				#FertilityGod
+				FertilityGodName = west_christian_fertility_god_name
+				FertilityGodNamePossessive = west_christian_fertility_god_name_possessive
+				FertilityGodSheHe = CHARACTER_SHEHE_SHE
+				FertilityGodHerHis = CHARACTER_HERHIS_HER
+				FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+				#WealthGod
+				WealthGodName = west_christian_wealth_god_name
+				WealthGodNamePossessive = slavic_wealth_god_name_possessive
+				WealthGodSheHe = CHARACTER_SHEHE_HE
+				WealthGodHerHis = CHARACTER_HERHIS_HIS
+				WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+				#HouseholdGod
+				HouseholdGodName = west_christian_household_god_name
+				HouseholdGodNamePossessive = slavic_household_god_name_possessive
+				HouseholdGodSheHe = CHARACTER_SHEHE_HE
+				HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+				HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+
+				#KnowledgeGod
+				KnowledgeGodName = west_christian_knowledge_god_name
+				KnowledgeGodNamePossessive = slavic_knowledge_god_name_possessive
+				KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
+				KnowledgeGodHerHis = CHARACTER_HERHIS_HER
+				KnowledgeGodHerHim = CHARACTER_HERHIM_HER
+
+				#WarGod
+				WarGodName = west_christian_war_god_name
+				WarGodNamePossessive = slavic_war_god_name_possessive
+				WarGodSheHe = CHARACTER_SHEHE_HE
+				WarGodHerHis = CHARACTER_HERHIS_HIS
+				WarGodHerHim = CHARACTER_HERHIM_HIM
+
+				#WaterGod
+				WaterGodName = west_christian_water_god_name
+				WaterGodNamePossessive = wslavic_water_god_name_possessive
+				WaterGodSheHe = CHARACTER_SHEHE_HE
+				WaterGodHerHis = CHARACTER_HERHIS_HIS
+				WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+				# Patriarchs instead of Popes
+				ReligiousHeadName = slavic_religious_head_title
+				ReligiousHeadTitleName = slavic_religious_head_title_name			
+			}
+		}
 	}
 }

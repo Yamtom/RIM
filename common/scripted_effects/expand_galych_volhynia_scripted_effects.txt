@@ -12,3 +12,25 @@
 		title:k_ruthenia = { set_coa = d_chernigov }
 	}
 }
+create_grand_principality_of_moscow_scripted_effect = {
+	title:d_opolye = { set_de_jure_liege_title = title:k_opolye }
+	title:d_vologda = { set_de_jure_liege_title = title:k_opolye }
+	title:d_ryazan = { set_de_jure_liege_title = title:k_opolye }
+	title:d_nizhny_novgorod = { set_de_jure_liege_title = title:k_opolye }
+	title:d_novosil = { set_de_jure_liege_title = title:k_opolye }
+	
+	hidden_effect = {
+		title:e_russia = { set_de_jure_liege_title = title:k_bjarmland}
+		title:k_opolye = { set_capital_county = title:c_moskva }
+		title:d_opolye = { set_capital_county = title:c_moskva }
+		title:k_opolye = { set_title_name = c_moskva }
+		title:d_opolye = { set_title_name = c_moskva }
+		title:k_opolye = { set_coa = c_moskva }
+	}
+}
+create_russian_empire_scripted_effect = {
+	title:e_volga-ural = { set_de_jure_liege_title = title:e_rossia}
+	title:e_russia = { set_de_jure_liege_title = title:e_rossia}
+	title:e_caspian-pontic_steppe = { set_de_jure_liege_title = title:e_rossia}
+	title:k_opolye = { set_de_jure_liege_title = title:e_rossia}
+}

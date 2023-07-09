@@ -22,3 +22,44 @@ expand_galych_volhynia.0001 = {
 		add_prestige = medium_prestige_gain
 	}
 }
+namespace = create_grand_principality_of_moscow
+
+##################################################
+# Create Grand Principality of Moscow Major Decision Events
+# 0001
+##################################################
+
+create_grand_principality_of_moscow.0001 = {
+	type = character_event
+	title = create_grand_principality_of_moscow.0001.t
+	desc = create_grand_principality_of_moscow.0001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:founder
+		animation = personality_honorable
+	}
+
+	immediate = { create_grand_principality_of_moscow_scripted_effect = yes }
+
+	option = {
+		name = create_grand_principality_of_moscow.0001.a
+		add_prestige = medium_prestige_gain
+	}
+}
+create_russian_empire.0001 = {
+	type = character_event
+	title = create_russian_empire.0001.t
+	desc = create_russian_empire.0001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:founder
+		animation = personality_honorable
+	}
+
+	immediate = { create_russian_empire_scripted_effect = yes }
+
+	option = {
+		name = create_russian_empire.0001.a
+		add_prestige = large_prestige_gain
+	}
+}
