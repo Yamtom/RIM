@@ -59,7 +59,7 @@
  create_grand_principality_of_moscow_decision_confirm:0 "Foster a Grand principality!"
  #Expand Russia
  create_russian_empire_decision:0 "Foster a Russian Empire"
- create_russian_empire_decision_desc:0 "We lay claim to the vast lands from Volga-Urals, uniting all of Rus' and Khazaria. Now we herald the birth of a new Empire - the Russian Empire."
+ create_russian_empire_decision_desc:0 "We lay claim to the vast lands from Volga-Urals. Now we herald the birth of a new Empire - the Russian Empire."
  create_russian_empire_decision_tooltip:0 "Muscovy heralds the crafting of the Russian Empire"
  create_russian_empire_decision_confirm:0 "Foster a Russian Empire!"
 

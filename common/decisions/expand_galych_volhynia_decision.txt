@@ -152,6 +152,7 @@ create_grand_principality_of_moscow_decision = {
 		base = 100
 	}
 }
+
 create_russian_empire_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
 	major = yes
@@ -187,8 +188,6 @@ create_russian_empire_decision = {
 		is_independent_ruler = yes
 		completely_controls = title:k_opolye
 		completely_controls = title:e_volga-ural
-		completely_controls = title:e_russia
-		completely_controls = title:e_caspian-pontic_steppe
 	}
 
 	is_valid_showing_failures_only = {
