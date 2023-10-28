@@ -35,6 +35,10 @@ e_russia = {	#Kievan Rus
 		name_list_meshchera = cn_russa
 		name_list_mari = cn_russa
 		name_list_muroma = cn_russa
+		name_list_greek = cn_rosia
+		name_list_tatar = cn_rus
+		name_list_hungarian = cn_rusz
+		name_list_latgalian = cn_krievija
 	}
 
 	k_ruthenia = {
@@ -65,6 +69,10 @@ e_russia = {	#Kievan Rus
 				name_list_danish = cn_konugard_NORDAN
 				name_list_polish = cn_kijow
 				name_list_lithuanian = cn_kijevas
+				name_list_english = cn_kyiv
+				name_list_finnish = cn_kiova
+				name_list_portuguese = cn_quieve
+				name_list_german = cn_kiew
 			}
 
 			c_kiev = {
@@ -78,6 +86,10 @@ e_russia = {	#Kievan Rus
 					name_list_danish = cn_konugard_NORDAN
 					name_list_polish = cn_kijow
 					name_list_lithuanian = cn_kijevas
+					name_list_english = cn_kyiv
+					name_list_finnish = cn_kiova
+					name_list_portuguese = cn_quieve
+					name_list_german = cn_kiew
 				}
 
 				b_kiev = {
@@ -93,6 +105,10 @@ e_russia = {	#Kievan Rus
 						name_list_danish = cn_konugard_NORDAN
 						name_list_polish = cn_kijow
 						name_list_lithuanian = cn_kijevas
+						name_list_english = cn_kyiv
+						name_list_finnish = cn_kiova
+						name_list_portuguese = cn_quieve
+						name_list_german = cn_kiew
 					}
 				}
 				b_vyshgorod = {
@@ -231,7 +247,10 @@ e_russia = {	#Kievan Rus
 
 				cultural_names = {
 					name_list_polish = cn_uszyca
-					 name_list_vlach = cn_usita
+					name_list_vlach = cn_usita
+					name_list_german = cn_uschitz
+					name_list_russian = cn_ushitsa
+					name_list_hungarian = cn_usica					 
 				}
 
 				b_ushytsia = {
@@ -243,6 +262,9 @@ e_russia = {	#Kievan Rus
 					cultural_names = {
 						name_list_polish = cn_uszyca
 						 name_list_vlach = cn_usita
+						 name_list_german = cn_uschitz
+						 name_list_russian = cn_ushitsa
+						 name_list_hungarian = cn_usica		
 					}
 				}
 				b_vinnytsia = {
@@ -818,6 +840,30 @@ e_russia = {	#Kievan Rus
 			name_list_swedish = cn_gardariki
 			name_list_danish = cn_gardariki
 			name_list_norwegian = cn_gardariki
+			name_list_german = cn_naugard
+			name_list_polish = cn_nowogrodek
+			name_list_latin = cn_novumcastrum
+			name_list_finnish = cn_novanlinna
+			name_list_sami = cn_novanlinna
+			name_list_vepsian = cn_novanlinna
+			name_list_karelian = cn_novanlinna
+			name_list_estonian = cn_uuslinn
+			name_list_hungarian = cn_ujvaros
+			name_list_pecheneg = cn_yenicale
+			name_list_cuman = cn_yenicale
+			name_list_khazar = cn_yenicale
+			name_list_bolghar = cn_yenicale
+			name_list_bashkir = cn_yenicale
+			name_list_avar = cn_yenicale
+			name_list_kipchak = cn_yenicale
+			name_list_latgalian = cn_naugardas
+			name_list_prussian = cn_naugardas
+			name_list_vlach = cn_orasulnou
+			name_list_pommeranian = cn_nowegrod
+			name_list_czech = cn_nowegrod
+			name_list_polabian = cn_nowegrod
+			name_list_slovien = cn_nowegrod
+			name_list_german = cn_neustadt
 		}
 
 		d_novgorod = {
@@ -832,6 +878,30 @@ e_russia = {	#Kievan Rus
 				name_list_danish = cn_holmgardr
 				name_list_norwegian = cn_holmgardr
 				name_list_lithuanian = cn_naugardas
+				name_list_polish = cn_nowogrodek
+				name_list_polish = cn_nowogrodek
+				name_list_latin = cn_novumcastrum
+				name_list_finnish = cn_novanlinna
+				name_list_sami = cn_novanlinna
+				name_list_vepsian = cn_novanlinna
+				name_list_karelian = cn_novanlinna
+				name_list_estonian = cn_uuslinn
+				name_list_hungarian = cn_ujvaros
+				name_list_pecheneg = cn_yenicale
+				name_list_cuman = cn_yenicale
+				name_list_khazar = cn_yenicale
+				name_list_bolghar = cn_yenicale
+				name_list_bashkir = cn_yenicale
+				name_list_avar = cn_yenicale
+				name_list_kipchak = cn_yenicale
+				name_list_latgalian = cn_naugardas
+				name_list_prussian = cn_naugardas
+				name_list_vlach = cn_orasulnou
+				name_list_pommeranian = cn_nowegrod
+				name_list_czech = cn_nowegrod
+				name_list_polabian = cn_nowegrod
+				name_list_slovien = cn_nowegrod
+				name_list_german = cn_neustadt
 			}
 
 			c_novgorod = {
@@ -850,6 +920,29 @@ e_russia = {	#Kievan Rus
 						name_list_danish = cn_holmgardr
 						name_list_norwegian = cn_holmgardr
 						name_list_lithuanian = cn_naugardas
+						name_list_polish = cn_nowogrodek
+						name_list_latin = cn_novumcastrum
+						name_list_finnish = cn_novanlinna
+						name_list_sami = cn_novanlinna
+						name_list_vepsian = cn_novanlinna
+						name_list_karelian = cn_novanlinna
+						name_list_estonian = cn_uuslinn
+						name_list_hungarian = cn_ujvaros
+						name_list_pecheneg = cn_yenicale
+						name_list_cuman = cn_yenicale
+						name_list_khazar = cn_yenicale
+						name_list_bolghar = cn_yenicale
+						name_list_bashkir = cn_yenicale
+						name_list_avar = cn_yenicale
+						name_list_kipchak = cn_yenicale
+						name_list_latgalian = cn_naugardas
+						name_list_prussian = cn_naugardas
+						name_list_vlach = cn_orasulnou
+						name_list_pommeranian = cn_nowegrod
+						name_list_czech = cn_nowegrod
+						name_list_polabian = cn_nowegrod
+						name_list_slovien = cn_nowegrod
+						name_list_german = cn_neustadt
 					}
 				}
 				b_ladoga = {
@@ -865,6 +958,33 @@ e_russia = {	#Kievan Rus
 						name_list_norwegian = cn_aldeigjuborg
 						name_list_finnish = cn_laatokka
 						name_list_karelian = cn_laatokka
+						name_list_estonian = cn_laadoga
+						name_list_vepsian = cn_laatokka
+						name_list_sami = cn_laadog
+						name_list_mordvin = cn_laadog
+						name_list_merya = cn_laadog
+						name_list_meshchera = cn_laadog
+						name_list_chuvash = cn_lad_ga
+						name_list_kipchak = cn_laadag
+						name_list_avar = cn_laadag
+						name_list_bashkir = cn_laadag
+						name_list_bolghar = cn_laadag
+						name_list_khazar = cn_laadag
+						name_list_cuman = cn_laadag
+						name_list_pecheneg = cn_laadag
+						name_list_mari = cn_laadog
+						name_list_muroma  = cn_laadog
+						name_list_udmurt = cn_ladug
+						name_list_komi = cn_laadog
+						name_list_latvian = cn_laadoga
+						name_list_lithuanian = cn_laadoga
+						name_list_prussian = cn_laadoga
+						name_list_polish = cn_wladozh
+						name_list_czech = cn_ladozh
+						name_list_slovak = cn_ladozh
+						name_list_hungarian = cn_ladoga
+						name_list_vlach = cn_ladoga
+						name_list_german = cn_ladogasee
 					}
 				}
 				b_lyuban = {
@@ -930,6 +1050,12 @@ e_russia = {	#Kievan Rus
 					name_list_finnish = cn_pihkova
 					name_list_karelian = cn_pihkova
 					name_list_estonian = cn_pihkova
+					name_list_latvian = cn_pleskava
+					name_list_prussian = cn_pleskaw
+					name_list_hungarian = cn_pleszkova
+					name_list_german = cn_pleskau
+					name_list_polish = cn_pleskow
+					name_list_vlach = cn_plescova
 				}
 
 				b_pskov = {
@@ -943,6 +1069,12 @@ e_russia = {	#Kievan Rus
 						name_list_finnish = cn_pihkova
 						name_list_karelian = cn_pihkova
 						name_list_estonian = cn_pihkova
+						name_list_latvian = cn_pleskava
+						name_list_prussian = cn_pleskaw
+						name_list_hungarian = cn_pleszkova
+						name_list_german = cn_pleskau
+						name_list_polish = cn_pleskow
+						name_list_vlach = cn_plescova
 					}
 				}
 				b_izborsk = {
@@ -1316,6 +1448,13 @@ e_russia = {	#Kievan Rus
 				cultural_names = {
 					name_list_lithuanian = cn_naugardukas
 					name_list_polish = cn_nowogrodek
+					name_list_finnish = cn_novgorodok
+					name_list_pecheneg = cn_yenisehir
+					name_list_cuman = cn_yenisehir
+					name_list_khazar = cn_yenisehir
+					name_list_vlach = cn_novigrad
+					name_list_hungarian = cn_ujvaros:
+					name_list_german = cn_neugarten
 				}
 
 				b_novogrudok = {
@@ -1327,6 +1466,13 @@ e_russia = {	#Kievan Rus
 					cultural_names = {
 						name_list_lithuanian = cn_naugardukas
 						name_list_polish = cn_nowogrodek
+						name_list_finnish = cn_novgorodok
+						name_list_pecheneg = cn_yenisehir
+						name_list_cuman = cn_yenisehir
+						name_list_khazar = cn_yenisehir
+						name_list_vlach = cn_novigrad
+						name_list_hungarian = cn_ujvaros:
+						name_list_german = cn_neugarten
 					}
 				}
 				b_slonim = {
@@ -1421,6 +1567,10 @@ e_russia = {	#Kievan Rus
 					cultural_names = {
 						name_list_lithuanian = cn_zytkavicai
 						name_list_polish = cn_zydkowicze
+						name_list_pecheneg = cn_zitkavci
+						name_list_finnish = cn_sytkavikki
+						name_list_estonian = cn_sytkavikki
+					}
 					}
 				}
 				b_mikashevichy = {
@@ -1940,6 +2090,7 @@ e_russia = {	#Kievan Rus
 					name_list_muroma = cn_timerovo
 					name_list_mordvin = cn_timerovo
 					name_list_mari = cn_timerovo
+					name_list_russian = cn_yaroslavl
 				}
 
 				b_yaroslavl = {
@@ -1958,6 +2109,7 @@ e_russia = {	#Kievan Rus
 						name_list_muroma = cn_timerovo
 						name_list_mordvin = cn_timerovo
 						name_list_mari = cn_timerovo
+						name_list_russian = cn_yaroslavl
 					}
 				}
 				b_rostov = {
