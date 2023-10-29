@@ -1,0 +1,33 @@
+﻿can_raid_across_water = {
+	OR = {
+		culture = {
+			OR = {
+				has_innovation = innovation_longboats
+				has_innovation = innovation_longboats_rus
+				has_innovation = innovation_african_canoes
+				has_cultural_parameter = culture_can_raid_at_sea_even_if_feudal
+			}
+		}
+		AND = {
+			exists = dynasty
+			dynasty = { has_dynasty_modifier = fp1_legacy_of_piracy_modifier }
+		}
+	}
+}
+ 
+can_traverse_river = {
+	OR = {
+		culture = {
+			OR = {
+				has_innovation = innovation_longboats
+				has_innovation = innovation_longboats_rus
+				has_innovation = innovation_african_canoes
+				has_cultural_parameter = can_travel_along_rivers
+			}
+		}
+		AND = {
+			exists = dynasty
+			dynasty = { has_dynasty_modifier = fp1_legacy_of_piracy_modifier }
+		}
+	}
+}

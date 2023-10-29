@@ -1,0 +1,1509 @@
+﻿
+# Rus
+ 
+baron_feudal_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+baron_feudal_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+barony_feudal_rus = {
+	type = title special = holder
+	tier = barony
+	priority = 6
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+count_feudal_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+count_feudal_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+county_feudal_rus = {
+	type = title special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+duke_feudal_independent_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+duke_feudal_independent_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+duchy_feudal_independent_rus = {
+	type = title special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+king_feudal_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+king_feudal_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+kingdom_feudal_rus = {
+	type = title special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+emperor_feudal_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = 103
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+emperor_feudal_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = 103
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+empire_feudal_rus = {
+	type = title special = holder
+	tier = empire
+	priority = 103
+	governments = { feudal_government } 
+	name_lists = { name_list_russian }
+}
+
+aron_tribal_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+baron_tribal_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+barony_tribal_rus = {
+	type = title special = holder
+	tier = barony
+	priority = 6
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+count_tribal_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 17
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+count_tribal_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 17
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+county_tribal_rus = {
+	type = title special = holder
+	tier = county
+	priority = 17
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+duke_tribal_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+duke_tribal_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+duchy_tribal_rus = {
+	type = title special = holder
+	tier = duchy
+	priority = 28
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+king_tribal_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+king_tribal_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+kingdom_tribal_rus = {
+	type = title special = holder
+	tier = kingdom
+	priority = 47
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+emperor_tribal_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = 103
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+emperor_tribal_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = 103
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+empire_tribal_rus = {
+	type = title special = holder
+	tier = empire
+	priority = 103
+	governments = { tribal_government } 
+	name_lists = { name_list_russian }
+}
+
+baron_republic_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+baron_republic_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+barony_republic_rus = {
+	type = title special = holder
+	tier = barony
+	priority = 6
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+count_republic_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 17
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+count_republic_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 17
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+county_republic_rus = {
+	type = title special = holder
+	tier = county
+	priority = 17
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+duke_republic_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+duke_republic_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+duchy_republic_rus = {
+	type = title special = holder
+	tier = duchy
+	priority = 28
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+king_republic_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+king_republic_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+kingdom_republic_rus = {
+	type = title special = holder
+	tier = kingdom
+	priority = 47
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+emperor_republic_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = 103
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+emperor_republic_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = 103
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+empire_republic_rus = {
+	type = title special = holder
+	tier = empire
+	priority = 103
+	governments = { republic_government } 
+	name_lists = { name_list_russian }
+}
+
+baron_clan_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+baron_clan_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+barony_clan_rus = {
+	type = title special = holder
+	tier = barony
+	priority = 6
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+count_clan_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 17
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+count_clan_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 17
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+county_clan_rus = {
+	type = title special = holder
+	tier = county
+	priority = 17
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+duke_clan_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+duke_clan_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+duchy_clan_rus = {
+	type = title special = holder
+	tier = duchy
+	priority = 28
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+king_clan_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+king_clan_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+kingdom_clan_rus = {
+	type = title special = holder
+	tier = kingdom
+	priority = 47
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+emperor_clan_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = 103
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+emperor_clan_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = 103
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+empire_clan_rus = {
+	type = title special = holder
+	tier = empire
+	priority = 103
+	governments = { clan_government } 
+	name_lists = { name_list_russian }
+}
+
+
+baron_mercenary_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+baron_mercenary_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+barony_mercenary_rus = {
+	type = title special = holder
+	tier = barony
+	priority = 6
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+count_mercenary_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 17
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+count_mercenary_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 17
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+county_mercenary_rus = {
+	type = title special = holder
+	tier = county
+	priority = 17
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+duke_mercenary_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+duke_mercenary_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+duchy_mercenary_rus = {
+	type = title special = holder
+	tier = duchy
+	priority = 28
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+king_mercenary_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+king_mercenary_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+kingdom_mercenary_rus = {
+	type = title special = holder
+	tier = kingdom
+	priority = 47
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+emperor_mercenary_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = 103
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+emperor_mercenary_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = 103
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+empire_mercenary_rus = {
+	type = title special = holder
+	tier = empire
+	priority = 103
+	governments = { mercenary_government } 
+	name_lists = { name_list_russian }
+}
+baron_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+baron_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+barony_rus = {
+	type = title special = holder
+	tier = barony
+	priority = 6
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+count_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 17
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+count_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 17
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+county_rus = {
+	type = title special = holder
+	tier = county
+	priority = 17
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+duke_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+duke_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+duchy_rus = {
+	type = title special = holder
+	tier = duchy
+	priority = 28
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+king_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+king_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+kingdom_rus = {
+	type = title special = holder
+	tier = kingdom
+	priority = 47
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+emperor_male_rus = {
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = 103
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+emperor_female_rus = {
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = 103
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+empire_rus = {
+	type = title special = holder
+	tier = empire
+	priority = 103
+	governments = { holy_order_government } 
+	name_lists = { name_list_russian }
+}
+king_feudal_male_bulgarian = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_bulgarian }
+}
+king_feudal_female_bulgarian = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_bulgarian }
+}
+kingdom_feudal_bulgarian = {
+	type = title
+	gender = 
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_bulgarian }
+}
+count_feudal_male_serbian = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_serbian }
+}
+count_feudal_female_serbian = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_serbian }
+}
+county_feudal_serbian = {
+	type = title
+	gender = 
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_serbian }
+}
+duke_feudal_male_serbian = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_serbian }
+}
+duke_feudal_female_serbian = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_serbian }
+}
+duchy_feudal_serbian = {
+	type = title
+	gender = 
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_serbian }
+}
+duke_feudal_male_vlach = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_vlach }
+}
+duke_feudal_female_vlach = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_vlach }
+}
+duchy_feudal_vlach = {
+	type = title
+	gender = 
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_vlach }
+}
+king_feudal_male_vlach = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_vlach }
+}
+king_feudal_female_vlach = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_vlach }
+}
+kingdom_feudal_vlach = {
+	type = title
+	gender = 
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_vlach }
+}
+count_feudal_male_croatian = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_croatian }
+}
+count_feudal_female_croatian = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_croatian }
+}
+county_feudal_croatian = {
+	type = title
+	gender = 
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_croatian }
+}
+king_feudal_male_polish = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_polish }
+}
+king_feudal_female_polish = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_polish }
+}
+kingdom_feudal_polish = {
+	type = title
+	gender = 
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_polish }
+}
+duke_feudal_male_polish = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_polish }
+}
+duke_feudal_female_polish = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_polish }
+}
+duchy_feudal_polish = {
+	type = title
+	gender = 
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_polish }
+}
+# Additional cultures like Polish, Czech, and slovien
+
+count_feudal_male_polish = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_polish }
+}
+count_feudal_female_polish = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_polish }
+}
+county_feudal_polish = {
+	type = title
+	gender = 
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_polish }
+}
+king_feudal_male_czech = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_czech }
+}
+king_feudal_female_czech = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_czech }
+}
+kingdom_feudal_czech = {
+	type = title
+	gender = 
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_czech }
+}
+duke_feudal_male_czech = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_czech }
+}
+duke_feudal_female_czech = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_czech }
+}
+duchy_feudal_czech = {
+	type = title
+	gender = 
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_czech }
+}
+count_feudal_male_czech = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_czech }
+}
+count_feudal_female_czech = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_czech }
+}
+county_feudal_czech = {
+	type = title
+	gender = 
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_czech }
+}
+king_feudal_male_slovien = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_slovien }
+}
+king_feudal_female_slovien = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_slovien }
+}
+kingdom_feudal_slovien = {
+	type = title
+	gender = 
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government } 
+	name_lists = { name_list_slovien }
+}
+duke_feudal_male_slovien = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_slovien }
+}
+duke_feudal_female_slovien = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_slovien }
+}
+duchy_feudal_slovien = {
+	type = title
+	gender = 
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government } 
+	name_lists = { name_list_slovien }
+}
+count_feudal_male_slovien = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_slovien }
+}
+count_feudal_female_slovien = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_slovien }
+}
+county_feudal_slovien = {
+	type = title
+	gender = 
+	special = holder
+	tier = county
+	priority = 17
+	governments = { feudal_government } 
+	name_lists = { name_list_slovien }
+}
+baron_theocracy_male_slavic = {
+	type = character
+	gender = male
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+baron_theocracy_female_slavic = {
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+barony_theocracy_slavic = {
+	type = title
+	special = holder
+	tier = barony
+	priority = 6
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+count_theocracy_male_slavic = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 17
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+count_theocracy_female_slavic = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 17
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+county_theocracy_slavic = {
+	type = title
+	special = holder
+	tier = county
+	priority = 17
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+duke_theocracy_male_slavic = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+duke_theocracy_female_slavic = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+duchy_theocracy_slavic = {
+	type = title
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+king_theocracy_male_slavic = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+king_theocracy_female_slavic = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+kingdom_theocracy_slavic = {
+	type = title
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+emperor_theocracy_male_slavic = {
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = 102
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+emperor_theocracy_female_slavic = {
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = 102
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+empire_theocracy_slavic = {
+	type = title
+	special = holder
+	tier = empire
+	priority = 102
+	governments = { theocracy_government }
+	faiths = { slavic_religion }
+}
+baron_theocracy_male_orthodox = {
+	type = character
+	gender = male
+	special = holder
+	tier = barony
+	priority = 103
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+baron_theocracy_female_orthodox = {
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = 103
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+barony_theocracy_orthodox = {
+	type = title
+	special = holder
+	tier = barony
+	priority = 103
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+count_theocracy_male_orthodox = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 104
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+count_theocracy_female_orthodox = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 104
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+county_theocracy_orthodox = {
+	type = title
+	special = holder
+	tier = county
+	priority = 104
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+duke_theocracy_male_orthodox = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 105
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+duke_theocracy_female_orthodox = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 105
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+duchy_theocracy_orthodox = {
+	type = title
+	special = holder
+	tier = duchy
+	priority = 105
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+duke_theocracy_independent_male_orthodox = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 106
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+duke_theocracy_independent_female_orthodox = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 106
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+duchy_theocracy_independent_orthodox = {
+	type = title
+	special = holder
+	tier = duchy
+	priority = 106
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+king_theocracy_male_orthodox = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 107
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+king_theocracy_female_orthodox = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 107
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+kingdom_theocracy_orthodox = {
+	type = title
+	special = holder
+	tier = kingdom
+	priority = 107
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+emperor_theocracy_male_orthodox = {
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = 108
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+emperor_theocracy_female_orthodox = {
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = 108
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+empire_theocracy_orthodox = {
+	type = title
+	special = holder
+	tier = empire
+	priority = 108
+	governments = { theocracy_government }
+	name_lists = { name_list_orthodox }
+	faiths = { orthodox }
+}
+prince_male_rus = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = kingdom
+	priority = 40
+	name_lists = { name_list_russian }
+	governments = { feudal_government tribal_government }
+	top_liege = no
+}
+prince_female_rus = {
+	type = character
+	gender = female
+	special = ruler_child
+	tier = kingdom
+	priority = 40
+	name_lists = { name_list_russian }
+	governments = { feudal_government tribal_government }
+	top_liege = no
+}
+prince_male_rus_empire = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = empire
+	priority = 40
+	name_lists = { name_list_russian }
+	governments = { feudal_government tribal_government } 
+	name_lists = { name_list_russian }
+}
+prince_female_rus_empire = {
+	type = character
+	gender = female
+	special = ruler_child
+	tier = empire
+	priority = 40
+	name_lists = { name_list_russian }
+	governments = { feudal_government tribal_government }
+	top_liege = no
+}
