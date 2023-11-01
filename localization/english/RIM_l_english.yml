@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  # Cultura
  russian:0 "Ruth"
  russian_prefix:0 "Ruth"
@@ -330,12 +330,12 @@
  empire_clan_rus:0 "Velikoe Starshynstvo"
 
  # Ruthenian Tribal tiers
- baron_tribal_male_rus:0 "Vozhd"
- baron_tribal_female_rus:0 "Vozhdya"
- barony_tribal_rus:0 "Plemya"
- count_tribal_male_rus:0 "Ataman"
- count_tribal_female_rus:0 "Atamana"
- county_tribal_rus:0 "Atamanstvo"
+ baron_tribal_male_rus:0 "Ataman"
+ baron_tribal_female_rus:0 "Atamana"
+ barony_tribal_rus:0 "Atamanstvo"
+ count_tribal_male_rus:0 "Vozhd"
+ count_tribal_female_rus:0 "Vozhdya"
+ county_tribal_rus:0 "Plemya"
  duke_tribal_male_rus:0 "Voivode"
  duke_tribal_female_rus:0 "Voivoditsa"
  duchy_tribal_rus:0 "Voivodestvo"
@@ -465,3 +465,23 @@
  # Moddifier
  rus_gathering:1 "Rus Gathering"
  rus_gathering_desc:0 "The Rus people have a tradition of gathering, fostering diplomacy and loyalty among vassals. This social practice has become a cornerstone in maintaining stability and goodwill within our realms."
+ #Culture
+ drevlian:0 "Drevlian"
+ drevlian_prefix:0 "Drevlo"
+ drevlian_collective_noun:1 "Drevlians"
+
+ polanian:0 "Polanian"
+ polanian_prefix:0 "Polano"
+ polanian_collective_noun:1 "Polanians"
+
+ tivercian_ulich_union:0 "Ulichian"
+ tivercian_ulich_union_prefix:0 "Ulicho"
+ tivercian_ulich_union_collective_noun:1 "Ulichians"
+
+ white_croat:0 "White Croat"
+ white_croat_prefix:0 "White Croato"
+ white_croat_collective_noun:1 "White Croats"
+
+ krivichian:0 "Krivichian"
+ krivichian_prefix:0 "Krivicho"
+ krivichian_collective_noun:1 "Krivichians"

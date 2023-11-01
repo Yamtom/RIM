@@ -1,4 +1,4 @@
-﻿russian = {
+russian = {
 	color = russian
 	
 	ethos = ethos_communal
@@ -11,10 +11,6 @@
 		tradition_mendicant_mystics
 		tradition_formation_fighting
 		tradition_druzhina
-
-		tradition_legalistic
-		tradition_roman_legacy
-
 	} 
 	
 	name_list = name_list_russian
@@ -119,5 +115,154 @@ volhynian = {
 		17 = slavic_northern_dark_hair
 		30 = slavic_blond
 		3 = slavic_ginger
+	}
+}
+drevlian = {
+	color = { 0.55 0.7 0.25 }
+	
+	ethos = ethos_spiritual
+	heritage = heritage_east_slavic
+	language = language_east_slavic
+	martial_custom = martial_custom_equal
+	traditions = {
+		tradition_religious_patronage
+        tradition_forest_wardens
+		tradition_forest_folk
+		tradition_philosopher_culture
+	}
+	
+	name_list = name_list_severian
+
+	coa_gfx = { east_slavic_group_coa_gfx magyar_group_coa_gfx steppe_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { eastern_unit_gfx }
+
+	ethnicities = {
+		18 = slavic_northern_blond
+		15 = slavic_northern_ginger
+		25 = slavic_northern_brown_hair
+		20 = slavic_northern_dark_hair
+		20 = slavic_dark_hair
+		2 = slavic_ginger
+	}
+}
+polyanian = {
+	color = { 0.6 0.75 0.4 }
+	
+	ethos = ethos_bellicose
+	heritage = heritage_east_slavic
+	language = language_east_slavic
+	martial_custom = martial_custom_equal
+	traditions = {
+		tradition_castle_keepers
+		tradition_family_entrepreneurship
+		tradition_seafaring
+		tradition_culture_blending
+		tradition_welcoming
+	}
+	
+	name_list = name_list_volhynian
+
+	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx balto_finnic_group_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx western_clothing_gfx }
+	unit_gfx = { north_east_unit_gfx }
+
+	ethnicities = {
+		20 = slavic_northern_blond
+		18 = slavic_northern_ginger
+		25 = slavic_northern_brown_hair
+		20 = slavic_northern_dark_hair
+		15 = slavic_dark_hair
+		2 = slavic_ginger
+	}
+}
+tiver = {
+	color = { 0.7 0.85 0.5 }
+	
+	ethos = ethos_stoic
+	heritage = heritage_east_slavic
+	language = language_east_slavic
+	martial_custom = martial_custom_equal
+	traditions = {
+		tradition_fp1_coastal_warriors
+		tradition_hussar
+		tradition_mountaineer_ruralism
+		tradition_chivalry
+	}
+	
+	name_list = name_list_volhynian
+
+	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx western_clothing_gfx }
+	unit_gfx = { eastern_unit_gfx }
+
+	ethnicities = {
+		20 = slavic_northern_blond
+		18 = slavic_northern_ginger
+		25 = slavic_northern_brown_hair
+		20 = slavic_northern_dark_hair
+		15 = slavic_dark_hair
+		2 = slavic_ginger
+	}
+}
+white_croats = {
+	color = { 0.7 0.5 0.3 }
+	
+	ethos = ethos_courtly
+	heritage = heritage_south_slavic
+	language = language_east_slavic
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_mountain_homes
+		tradition_the_witenagemot
+		tradition_mountaineers
+		tradition_mystical_ancestors
+	}
+	
+	name_list = name_list_slovien
+
+	coa_gfx = { west_slavic_group_coa_gfx western_coa_gfx carpathian_group_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+
+	ethnicities = {
+		20 = slavic_blond
+		20 = slavic_ginger
+		20 = slavic_brown_hair
+		20 = slavic_dark_hair
+		20 = carpathian_dark_hair
+	}
+}
+krivichi = {
+	color = { 0.75 0.55 0.25 }
+	
+	ethos = ethos_communal
+	heritage = heritage_east_slavic
+	language = language_east_slavic
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_druzhina
+		tradition_forest_wardens
+		tradition_sacred_groves
+		tradition_equitable
+	}
+	
+	name_list = name_list_ilmenian
+
+	coa_gfx = { east_slavic_group_coa_gfx steppe_coa_gfx balto_finnic_group_coa_gfx }
+	building_gfx = { eastern_building_gfx }
+	clothing_gfx = { eastern_clothing_gfx }
+	unit_gfx = { eastern_unit_gfx }
+
+	ethnicities = {
+		25 = slavic_eastern_blond
+		15 = slavic_eastern_ginger
+		25 = slavic_eastern_brown_hair
+		25 = slavic_eastern_dark_hair
+		10 = finnic_dark_hair
 	}
 }
