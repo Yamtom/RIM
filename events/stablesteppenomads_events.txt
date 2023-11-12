@@ -1,0 +1,82 @@
+﻿namespace = stablesteppenomads
+
+stablesteppenomads.0001 = { #unite Turkic nomads into confederation
+	type = character_event
+	title = stablesteppenomads.0001.t
+	desc = stablesteppenomads.0001.desc
+	theme = realm
+	
+	right_portrait = {
+		character = scope:cuman-kipchak_uniter
+		animation = personality_bold
+	}
+
+	immediate = {
+		establish_cuman-kipchak_confederation_decision_effects = yes #de jure shifts
+	}
+
+	option = {
+		name = stablesteppenomads.0001.a
+		give_nickname = nick_the_great #could not get a custom one to work :(
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+stablesteppenomads.0003 = { #integrate e_caspian-pontic_steppe into e_golden_horde
+	type = character_event
+	title = stablesteppenomads.0003.t
+	desc = stablesteppenomads.0003.desc
+	theme = realm
+	
+	right_portrait = {
+		character = scope:cuman-kipchak_integrater
+		animation = personality_bold
+	}
+
+	immediate = {
+		add_prestige = massive_prestige_gain
+		hidden_effect = {
+			integrate_caspian-pontic_steppe_into_golden_horde_decision_effects = yes
+			spawn_mongol_troops_effect = yes
+		}
+	}
+
+	option = {
+		name = stablesteppenomads.0003.a
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+stablesteppenomads.0005 = { #integrate e_turan into e_chagatai
+	type = character_event
+	title = stablesteppenomads.0005.t
+	desc = stablesteppenomads.0005.desc
+	theme = realm
+	
+	right_portrait = {
+		character = scope:turan_integrater
+		animation = personality_bold
+	}
+
+	immediate = {
+		add_prestige = massive_prestige_gain
+		hidden_effect = {
+			integrate_turan_into_chagatai_decision_effects = yes 
+			spawn_mongol_troops_effect = yes
+		}
+	}
+
+	option = {
+		name = stablesteppenomads.0005.a
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}

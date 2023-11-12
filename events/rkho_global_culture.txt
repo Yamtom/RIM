@@ -1,0 +1,704 @@
+﻿namespace = rkho_global_culture
+
+#########################################################################################
+
+rkho_global_culture.0001 = {
+	type = empty
+	hidden = yes
+	
+	immediate = {
+		culture:russian = {
+			hidden_effect = {
+				custom_tooltip = rkho_global_culture_rus_now_russians
+				set_culture_name = {
+					noun = russian_new
+					collective_noun = russian_new_collective_noun
+					prefix = russian_new_prefix
+				}
+			}
+		}
+
+		every_county = {
+			limit = {
+				# All russian countie in Russia will be identified
+				culture = culture:russian
+				title_province = {	
+					OR = {					
+						geographical_region = russian_areas
+						geographical_region = later_russian_areas
+					}		
+				}
+			}
+			add_to_list = russian_counties
+		}
+
+
+
+		title:e_great_rus = {
+			every_in_de_jure_hierarchy = {
+				limit = { tier = tier_kingdom }
+				set_de_jure_liege_title = title:e_russia
+			}
+		}
+		title:e_great_rus.holder = {
+			save_scope_as = rus_guy
+		}
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
+
+		title:e_russia = {
+			change_title_holder = {
+				holder = scope:rus_guy
+				change = scope:title_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change
+		destroy_title = title:e_great_rus
+
+
+
+		title:k_polotsk = {
+			every_in_de_jure_hierarchy = {
+				limit = { tier = tier_duchy }
+				set_de_jure_liege_title = title:k_white_rus
+			}
+		}
+		title:k_polotsk.holder = {
+			save_scope_as = white_rus_guy
+		}
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
+
+		title:k_white_rus = {
+			change_title_holder = {
+				holder = scope:white_rus_guy
+				change = scope:title_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change
+		destroy_title = title:k_polotsk
+		title:c_berestye = { set_de_jure_liege_title = title:d_grodno }
+
+
+
+		title:k_kievan_rus = {
+			every_in_de_jure_hierarchy = {
+				limit = { tier = tier_duchy }
+				set_de_jure_liege_title = title:k_ruthenia
+			}
+		}
+		title:k_kievan_rus.holder = {
+			save_scope_as = ruthenian_guy
+		}
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
+
+		title:k_ruthenia = {
+			change_title_holder = {
+				holder = scope:ruthenian_guy
+				change = scope:title_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change
+		destroy_title = title:k_kievan_rus
+		title:d_yedisan = { set_de_jure_liege_title = title:k_ruthenia }
+		title:c_samar = { set_de_jure_liege_title = title:d_pereyaslavl }
+		title:c_bakhmut = { set_de_jure_liege_title = title:d_pereyaslavl }
+
+
+
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_east_slavic }
+					any_sub_realm_county = {
+						culture = culture:russian
+						title_province = {
+							OR = {
+								geographical_region = russian_areas
+								geographical_region = later_russian_areas
+							}
+						}
+					}
+				}
+				trigger_event = rkho_global_culture.0002
+			}
+			else = {
+				if = {
+					limit = {
+						save_temporary_scope_as = player
+						any_in_list = {
+							list = russian_counties
+							holder = {
+								is_within_diplo_range = { CHARACTER = scope:player }
+							}
+						}
+					}
+					trigger_event = rkho_global_culture.0003
+				}
+			}
+		}
+	}
+}
+
+# You are now Russian
+rkho_global_culture.0002 = {
+	type = character_event
+	title = rkho_global_culture.0002.t
+	desc = rkho_global_culture.0002.desc
+	theme = culture_change
+	left_portrait = root
+
+	option = {
+		name = rkho_global_culture.0002.a
+	}
+}
+
+# Russians are now Russian
+rkho_global_culture.0003 = {
+	type = character_event
+	title = rkho_global_culture.0003.t
+	desc = rkho_global_culture.0003.desc
+	theme = culture_change
+
+	option = {
+		name = rkho_global_culture.0003.a
+	}
+}
+
+rkho_global_culture.0004 = {
+	type = empty
+	hidden = yes
+	
+	immediate = {
+
+		#Flip Counties to Galician
+		every_county_in_region = {
+			region = galician_areas
+			custom = rkho_global_culture_calician_solidification
+			random = {
+				chance = 90
+				set_county_culture = culture:galician
+			}
+		}
+		every_living_character = {
+			limit = { 
+				is_landed = yes
+				OR = {
+					has_primary_title = title:k_spanish_galicia
+					has_primary_title = title:d_galicia
+					has_primary_title = title:d_porto
+					has_primary_title = title:d_coimbra
+					primary_title = {
+						OR = {
+							de_jure_liege = title:d_galicia
+							de_jure_liege.de_jure_liege = title:d_galicia
+							de_jure_liege = title:d_porto
+							de_jure_liege.de_jure_liege = title:d_porto
+							de_jure_liege = title:d_coimbra
+							de_jure_liege.de_jure_liege = title:d_coimbra
+						}
+					}
+				}
+			}
+			set_culture = culture:galician
+			every_close_family_member = {
+				limit = {
+					OR = {
+						is_landed = no
+						highest_held_title_tier = tier_duchy 
+					}
+				}
+				set_culture = culture:galician
+			}
+		}
+
+		#Flip Counties to Catalan
+		every_county_in_region = {
+			region = catalan_areas
+			custom = rkho_global_culture_catalan_solidification
+			random = {
+				chance = 90
+				set_county_culture = culture:catalan
+			}
+		}
+		every_living_character = {
+			limit = { 
+				is_landed = yes
+				OR = {
+					has_primary_title = title:d_barcelona
+					has_primary_title = title:d_valencia
+					has_primary_title = title:d_mallorca
+					primary_title = {
+						OR = {
+							de_jure_liege = title:d_barcelona
+							de_jure_liege.de_jure_liege = title:d_barcelona
+							de_jure_liege = title:d_valencia
+							de_jure_liege.de_jure_liege = title:d_valencia
+							de_jure_liege = title:d_mallorca
+							de_jure_liege.de_jure_liege = title:d_mallorca
+						}
+					}
+				}
+			}
+			set_culture = culture:catalan
+			every_close_family_member = {
+				limit = {
+					OR = {
+						is_landed = no
+						highest_held_title_tier = tier_duchy 
+					}
+				}
+				set_culture = culture:catalan
+			}
+		}
+
+		#Flip Counties to Basque
+		every_county_in_region = {
+			region = basque_areas
+			custom = rkho_global_culture_basque_solidification
+			random = {
+				chance = 90
+				set_county_culture = culture:basque
+			}
+		}
+		every_living_character = {
+			limit = { 
+				is_landed = yes
+				OR = {
+					has_primary_title = title:k_navarra
+					has_primary_title = title:d_viscaya
+					has_primary_title = title:d_navarra
+					primary_title = {
+						OR = {
+							de_jure_liege = title:d_viscaya
+							de_jure_liege.de_jure_liege = title:d_viscaya
+							de_jure_liege = title:d_navarra
+							de_jure_liege.de_jure_liege = title:d_navarra
+						}
+					}
+				}
+			}
+			set_culture = culture:basque
+			every_close_family_member = {
+				limit = {
+					OR = {
+						is_landed = no
+						highest_held_title_tier = tier_duchy 
+					}
+				}
+				set_culture = culture:basque
+			}
+		}
+
+		every_county = {
+			limit = {
+				# All iberian counties will be identified
+				title_province = {	
+					geographical_region = ghw_region_iberia		
+				}
+			}
+			add_to_list = iberian_counties
+		}
+
+		#Flip Counties to Asturleonese
+		every_county_in_region = {
+			region = leonese_areas
+			custom = rkho_global_culture_leonese_solidification
+			random = {
+				chance = 90
+				set_county_culture = culture:asturleonese
+			}
+		}
+		every_living_character = {
+			limit = { 
+				is_landed = yes
+				OR = {
+					has_primary_title = title:k_leon
+					has_primary_title = title:d_asturias
+					has_primary_title = title:d_leon
+					has_primary_title = title:d_badajoz
+					primary_title = {
+						OR = {
+							de_jure_liege = title:d_asturias
+							de_jure_liege.de_jure_liege = title:d_asturias
+							de_jure_liege = title:d_leon
+							de_jure_liege.de_jure_liege = title:d_leon
+							de_jure_liege = title:d_badajoz
+							de_jure_liege.de_jure_liege = title:d_badajoz
+						}
+					}
+				}
+			}
+			set_culture = culture:asturleonese
+			every_close_family_member = {
+				limit = {
+					OR = {
+						is_landed = no
+						highest_held_title_tier = tier_duchy 
+					}
+				}
+				set_culture = culture:asturleonese
+			}
+		}
+
+		#Flip Counties to Aragonese
+		every_county_in_region = {
+			region = aragonese_areas
+			custom = rkho_global_culture_aragonese_solidification
+			random = {
+				chance = 90
+				set_county_culture = culture:aragonese
+			}
+		}
+		every_living_character = {
+			limit = { 
+				is_landed = yes
+				OR = {
+					has_primary_title = title:k_aragon
+					has_primary_title = title:d_aragon
+					primary_title = {
+						OR = {
+							de_jure_liege = title:d_aragon
+							de_jure_liege.de_jure_liege = title:d_aragon
+						}
+					}
+				}
+			}
+			set_culture = culture:aragonese
+			every_close_family_member = {
+				limit = {
+					OR = {
+						is_landed = no
+						highest_held_title_tier = tier_duchy 
+					}
+				}
+				set_culture = culture:aragonese
+			}
+		}
+
+		if = {
+			limit = {
+				any_county_in_region = {
+					region = ghw_region_iberia
+					culture = culture:portuguese
+				}
+			}
+			#Flip Counties to Portuguese
+			every_county_in_region = {
+				region = portuguese_areas
+				custom = rkho_global_culture_portuguese_solidification
+				random = {
+					chance = 90
+					set_county_culture = culture:portuguese
+				}
+			}
+			every_living_character = {
+				limit = { 
+					is_landed = yes
+					OR = {
+						has_primary_title = title:k_portugal
+						has_primary_title = title:d_porto
+						has_primary_title = title:d_coimbra
+						has_primary_title = title:d_beja
+						has_primary_title = title:d_algarve
+						primary_title = {
+							OR = {
+								de_jure_liege = title:d_porto
+								de_jure_liege.de_jure_liege = title:d_porto
+								de_jure_liege = title:d_coimbra
+								de_jure_liege.de_jure_liege = title:d_coimbra
+								de_jure_liege = title:d_beja
+								de_jure_liege.de_jure_liege = title:d_beja
+								de_jure_liege = title:d_algarve
+								de_jure_liege.de_jure_liege = title:d_algarve
+							}
+						}
+					}
+				}
+				set_culture = culture:portuguese
+				every_close_family_member = {
+					limit = {
+						OR = {
+							is_landed = no
+							highest_held_title_tier = tier_duchy 
+						}
+					}
+					set_culture = culture:portuguese
+				}
+			}
+		}
+
+		#Flip Counties to Castilian
+		every_county_in_region = {
+			region = castilian_areas
+			custom = rkho_global_culture_castilian_solidification
+			random = {
+				chance = 90
+				set_county_culture = culture:castilian
+			}
+		}
+		every_living_character = {
+			limit = { 
+				is_landed = yes
+				OR = {
+					has_primary_title = title:k_castille
+					has_primary_title = title:d_cantabria
+					has_primary_title = title:d_castilla
+					has_primary_title = title:d_toledo
+					primary_title = {
+						OR = {
+							de_jure_liege = title:d_cantabria
+							de_jure_liege.de_jure_liege = title:d_cantabria
+							de_jure_liege = title:d_castilla
+							de_jure_liege.de_jure_liege = title:d_castilla
+							de_jure_liege = title:d_toledo
+							de_jure_liege.de_jure_liege = title:d_toledo
+						}
+					}
+				}
+			}
+			set_culture = culture:castilian
+			every_close_family_member = {
+				limit = {
+					OR = {
+						is_landed = no
+						highest_held_title_tier = tier_duchy 
+					}
+				}
+				set_culture = culture:castilian
+			}
+		}
+
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_iberian }
+					any_sub_realm_county = {
+						culture = { has_cultural_pillar = heritage_iberian }
+						title_province = {
+							geographical_region = ghw_region_iberia
+						}
+					}
+				}
+				trigger_event = rkho_global_culture.0005
+			}
+			else_if = {
+				limit = {
+					save_temporary_scope_as = player
+					any_in_list = {
+						list = ghw_region_iberia
+						holder = {
+							is_within_diplo_range = { CHARACTER = scope:player }
+						}
+					}
+				}
+				trigger_event = rkho_global_culture.0006
+			}
+		}
+	}
+}
+
+# You now have appropriate Iberian culture
+rkho_global_culture.0005 = {
+	type = character_event
+	title = rkho_global_culture.0005.t
+	desc = rkho_global_culture.0005.desc
+	theme = culture_change
+	left_portrait = root
+
+	option = {
+		name = rkho_global_culture.0005.a
+	}
+}
+
+# There are new less Andalusians
+rkho_global_culture.0006 = {
+	type = character_event
+	title = rkho_global_culture.0006.t
+	desc = rkho_global_culture.0006.desc
+	theme = culture_change
+
+	option = {
+		name = rkho_global_culture.0006.a
+	}
+}
+
+rkho_global_culture.0007 = {
+	type = empty
+	hidden = yes
+	
+	immediate = {
+		every_county = {
+			limit = {
+				# All russian countie in Russia will be identified
+				culture = culture:russian
+				title_province = {	
+					geographical_region = world_europe_south_italy		
+				}
+			}
+			add_to_list = italian_counties
+		}
+
+		title:d_savoie = { set_de_jure_liege_title = title:k_italy }
+		title:k_sicily = { set_de_jure_liege_title = title:e_italy }
+		title:k_venice = { set_de_jure_liege_title = title:e_italy }
+
+
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					any_sub_realm_county = {
+						title_province = {
+							geographical_region = world_europe_south_italy
+						}
+					}
+				}
+				trigger_event = rkho_global_culture.0008
+			}
+			else = {
+				if = {
+					limit = {
+						save_temporary_scope_as = player
+						any_in_list = {
+							list = italian_counties
+							holder = {
+								is_within_diplo_range = { CHARACTER = scope:player }
+							}
+						}
+					}
+					trigger_event = rkho_global_culture.0009
+				}
+			}
+		}
+	}
+}
+
+# Romans are gone from Italy
+rkho_global_culture.0008 = {
+	type = character_event
+	title = rkho_global_culture.0008.t
+	desc = rkho_global_culture.0008.desc
+	theme = culture_change
+	left_portrait = root
+
+	option = {
+		name = rkho_global_culture.0008.a
+	}
+}
+
+# Romans are gone from Italy
+rkho_global_culture.0009 = {
+	type = character_event
+	title = rkho_global_culture.0009.t
+	desc = rkho_global_culture.0009.desc
+	theme = culture_change
+
+	option = {
+		name = rkho_global_culture.0009.a
+	}
+}
+
+rkho_global_culture.0010 = {
+	type = empty
+	hidden = yes
+	
+	immediate = {
+		every_county = {
+			limit = {
+				title_province = {	
+					geographical_region = world_europe_north		
+				}
+			}
+			add_to_list = northern_counties
+		}
+
+		title:k_norway = { set_capital_county = title:c_vingulmork }
+		title:d_trandalog = { set_de_jure_liege_title = title:k_norway }
+		title:d_dalir = { set_de_jure_liege_title = title:k_norway }
+		title:d_jamtland = { set_de_jure_liege_title = title:k_norway }
+		title:d_halogaland = { set_de_jure_liege_title = title:k_norway }
+		title:d_duortnoseatnu = { set_de_jure_liege_title = title:k_norway }
+		title:d_duortnoseatnu = { set_capital_county = title:c_karasjohka }
+
+		title:d_norrland = { set_de_jure_liege_title = title:k_sweden }
+		title:d_aarjetje = { set_de_jure_liege_title = title:k_sweden }
+		title:d_vuovdisamieana = { set_de_jure_liege_title = title:k_sweden }
+		title:c_siggevara = { set_de_jure_liege_title = title:d_vuovdisamieana }
+
+		title:c_kittila = { set_de_jure_liege_title = title:d_giemajohka }
+		title:c_suondavara = { set_de_jure_liege_title = title:d_giemajohka }
+		destroy_title = title:k_sapmi
+		title:k_sapmi = {
+			every_in_de_jure_hierarchy = {
+				limit = { tier = tier_duchy }
+				set_de_jure_liege_title = title:k_finland
+			}
+		}
+
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					any_sub_realm_county = {
+						title_province = {
+							geographical_region = world_europe_north
+						}
+					}
+				}
+				trigger_event = rkho_global_culture.0011
+			}
+			else = {
+				if = {
+					limit = {
+						save_temporary_scope_as = player
+						any_in_list = {
+							list = northern_counties
+							holder = {
+								is_within_diplo_range = { CHARACTER = scope:player }
+							}
+						}
+					}
+					trigger_event = rkho_global_culture.0012
+				}
+			}
+		}
+	}
+}
+
+# End of Sapmi Finnmork
+rkho_global_culture.0011 = {
+	type = character_event
+	title = rkho_global_culture.0011.t
+	desc = rkho_global_culture.0011.desc
+	theme = culture_change
+	left_portrait = root
+
+	option = {
+		name = rkho_global_culture.0011.a
+	}
+}
+
+# End of Sapmi Finnmork
+rkho_global_culture.0012 = {
+	type = character_event
+	title = rkho_global_culture.0012.t
+	desc = rkho_global_culture.0012.desc
+	theme = culture_change
+
+	option = {
+		name = rkho_global_culture.0012.a
+	}
+}

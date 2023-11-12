@@ -1,0 +1,79 @@
+﻿
+namespace = east_slavic_decisions
+
+##################################################
+# Create Moldavian culture
+# by obese chogus
+##################################################
+
+east_slavic_decisions.0001 = {
+	type = character_event
+	title = east_slavic_decisions.0001.t
+	desc = east_slavic_decisions.0001.desc
+	theme = culture_change
+	left_portrait = {
+		character = scope:embracer
+		animation = personality_bold
+	}
+
+	immediate = {
+		save_scope_as = embracer
+		culture = { save_scope_as = embracer_former_culture }
+	}
+
+	option = {
+		name = east_slavic_decisions.0001.a
+		establish_moldavian_culture_effect = yes
+		hidden_effect = { # Moved here from embrace_english_culture_decision
+			# Send event to other players
+			every_player = {
+				limit = {
+					NOT = { this = root }
+					OR = {
+						primary_title = {
+							OR = {
+								de_jure_liege = title:k_moldavia
+								de_jure_liege.de_jure_liege = title:k_moldavia
+								de_jure_liege = title:e_great_rus
+								de_jure_liege.de_jure_liege = title:e_great_rus
+								de_jure_liege.de_jure_liege.de_jure_liege = title:e_great_rus
+							}
+						}
+						culture = { has_cultural_pillar = heritage_east_slavic }
+						culture = { has_cultural_pillar = heritage_vlach }
+					}
+				}
+				trigger_event = east_slavic_decisions.0002
+			}
+		}
+	}
+}
+
+# Players informed
+east_slavic_decisions.0002 = {
+	type = character_event
+	title = east_slavic_decisions.0001.t
+	desc = east_slavic_decisions.0002.desc
+	theme = culture_change
+	left_portrait = {
+		character = scope:embracer
+		animation = personality_bold
+	}
+
+	option = { # Not east_slavic
+		name = east_slavic_decisions.0002.a
+		trigger = {
+			NOT = { has_cultural_pillar = heritage_east_slavic }
+			NOT = { has_cultural_pillar = heritage_vlach }
+		}
+	}
+	option = { # Also east_slavic
+		name = east_slavic_decisions.0002.b
+		trigger = {
+			OR = {
+				has_cultural_pillar = heritage_vlach
+				has_cultural_pillar = heritage_east_slavic
+			}
+		}
+	}
+}

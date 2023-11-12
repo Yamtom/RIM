@@ -1,0 +1,70 @@
+
+ruthenian = {
+	trigger = {
+		culture = { has_cultural_pillar = heritage_east_slavic }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_east_slavic }
+			OR = {
+				duchy = title:d_kiev
+				duchy = title:d_halych
+				duchy = title:d_cherven_cities
+				duchy = title:d_volhynia
+				duchy = title:d_turov
+				duchy = title:d_chernigov
+				duchy = title:d_pereyaslavl
+				duchy = title:d_yedisan
+				duchy = title:d_levedia
+				duchy = title:d_khopyor
+				duchy = title:d_don_valley
+			}
+		}
+	}
+}
+
+belarusian = { #Aka white ruthenian
+	trigger = {
+		culture = { has_cultural_pillar = heritage_east_slavic }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_east_slavic }
+			OR = {
+				duchy = title:d_pinsk
+				duchy = title:d_minsk
+				duchy = title:d_grodno
+				duchy = title:d_polotsk
+			}
+		}
+	}
+}
+
+red_ruthenian = {
+	trigger = {
+		culture = { has_cultural_pillar = heritage_east_slavic }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_east_slavic }
+			OR = {
+				duchy = title:d_halych
+				duchy = title:d_cherven_cities
+			}
+		}
+	}
+}
+
+novgorodian = {
+	trigger = {
+		culture = { has_cultural_pillar = heritage_east_slavic }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_east_slavic }
+			OR = {
+				duchy = title:d_novgorod
+				duchy = title:d_luki
+				duchy = title:d_vepsia
+				duchy = title:d_vologda
+				duchy = title:d_chudia
+				duchy = title:d_ustyug
+				duchy = title:d_biarmia
+				duchy = title:d_karelia
+				duchy = title:d_guoldat
+			}
+		}
+	}
+}

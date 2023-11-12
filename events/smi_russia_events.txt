@@ -1,0 +1,211 @@
+﻿namespace = smi_russia
+
+# unite_the_eastern_slavs_decision
+# 0005-0006
+
+# establish_russian_culture_decision
+# 3002-3005
+
+# I united the eastern slavs
+smi_russia.0005 = {
+	type = character_event
+	title = smi_russia.0005.t
+	desc = smi_russia.0005.desc
+	theme = realm
+	left_portrait = {
+		character = scope:eastern_slav_uniter
+		animation = personality_honorable
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+		unite_the_eastern_slavs_decision_effects = yes
+	}
+
+	option = {
+		name = smi_russia.0005.a
+
+		give_nickname = nick_the_crowned
+	}
+}
+
+# Someone united the eastern slavs
+smi_russia.0006 = {
+	type = character_event
+	title = smi_russia.0005.t
+	desc = smi_russia.0006.desc
+	theme = realm
+	left_portrait = {
+		character = scope:eastern_slav_uniter
+		animation = personality_honorable
+	}
+
+	option = {
+		name = name_i_see
+	}
+}
+
+#########################################################################
+# Converting Norse/East Slavic into Russian								#
+# Based on Norman merge from base game									#
+# by Sean Hughes & Bianca Savazzi										#
+# smi_russia.3001-3009													#
+#########################################################################
+
+smi_russia.3002 = {
+	type = character_event
+	title = smi_russia.3002.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+			    trigger = {
+					culture = culture:norse
+			    }
+			    desc = smi_russia.3002.desc.norse
+			}
+			desc = smi_russia.3002.desc.slavic
+		}
+	}
+	theme = culture_change
+	left_portrait = scope:russian_founder
+
+	immediate = {
+		show_as_tooltip = {
+			custom_tooltip = global_culture.custom.merge_culture
+			culture:russian = {
+				get_all_innovations_from = scope:old_culture_1
+				get_all_innovations_from = scope:old_culture_2
+			}
+		}
+	}
+
+	option = { # "Russian we shall be called then."
+		name = smi_russia.3002.a
+		root = {
+			set_culture = culture:russian
+			capital_county = { set_county_culture = culture:russian }
+		}
+		every_close_family_member = {
+			limit = {
+				OR = {
+					is_courtier_of = root
+					AND = {
+						is_vassal_of = root
+						is_child_of = root
+					}
+				}
+			}
+			set_culture = culture:russian
+			hidden_effect = {
+				if = {
+					limit = {
+						this = root.player_heir
+					}
+					set_culture = culture:russian
+				}
+			}
+		}
+		scope:russian_founder = {
+			add_opinion = {
+				target = root
+				modifier = respect_opinion
+				opinion = 10
+			}
+		}
+	}
+
+	option = { # "This is not the way."
+		name = smi_russia.3002.b
+		add_prestige = medium_prestige_loss
+		scope:russian_founder = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -10
+			}
+		}
+	}
+
+	option = { # "To new friends and new beginnings!"
+		name = smi_russia.3002.c
+		trigger = {
+			has_trait = gregarious
+		}
+		trait = gregarious
+		add_prestige = minor_prestige_gain
+		root = {
+			set_culture = culture:russian
+			capital_county = { set_county_culture = culture:russian }
+		}
+		every_close_family_member = {
+			limit = {
+				OR = {
+					is_courtier_of = root
+					AND = {
+						is_vassal_of = root
+						is_child_of = root
+					}
+				}
+			}
+			set_culture = culture:russian
+			hidden_effect = {
+				if = {
+					limit = {
+						this = root.player_heir
+					}
+					set_culture = culture:russian
+				}
+			}
+		}
+		scope:russian_founder = {
+			add_opinion = {
+				target = root
+				modifier = friendliness_opinion
+				opinion = 20
+			}
+		}
+	}
+}
+
+smi_russia.3003 = {
+	type = character_event
+	title = smi_russia.3003.t
+	desc = smi_russia.3003.desc
+	theme = culture_change
+	left_portrait = scope:russian_founder
+
+	immediate = {
+		show_as_tooltip = {
+			custom_tooltip = global_culture.custom.merge_culture
+			culture:russian = {
+				get_all_innovations_from = scope:old_culture_1
+				get_all_innovations_from = scope:old_culture_2
+			}
+		}
+	}
+
+	option = {
+		name = smi_russia.3003.a
+	}
+}
+
+smi_russia.3005 = {
+	type = character_event
+	title = smi_russia.3005.t
+	desc = smi_russia.3005.desc
+	theme = culture_change
+	left_portrait = scope:russian_founder
+
+	immediate = {
+		show_as_tooltip = {
+			culture:russian = {
+				get_all_innovations_from = scope:old_culture_1
+				get_all_innovations_from = scope:old_culture_2
+			}
+		}
+	}
+
+	option = {
+		name = smi_russia.3005.a
+	}
+}

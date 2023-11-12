@@ -10,10 +10,7 @@ rus_gathering_decision = {
 	is_shown = {
 		is_ruler = yes
 		is_landed = yes
-        heritage = heritage_east_slavic
-	}
-	
-	is_valid = {
+		culture = { has_cultural_pillar = heritage_east_slavic }
 		OR = {
 			has_title = title:k_ruthenia
 			has_title = title:k_novgorod
@@ -21,6 +18,9 @@ rus_gathering_decision = {
 			has_title = title:k_galicia-volhynia
 			has_title = title:k_white_rus
 		} 
+	}
+	
+	is_valid = {
 		is_independent_ruler = yes
 	}
 	
@@ -93,8 +93,7 @@ rus_nomads_decision = {
 	is_valid = {
 		is_independent_ruler = yes
 	}
-	
-	is_valid_showing_failures_only = {
+	d_showing_failures_only = {
 		is_imprisoned = no
 		is_available_adult = yes
 		is_at_war = no
@@ -125,6 +124,1618 @@ rus_nomads_decision = {
 		
     } 
 	
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+northern_expansion_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+
+	desc = northern_expansion_decision_desc
+	selection_tooltip = northern_expansion_decision_tooltip
+	major = yes
+	
+	ai_check_interval = 1
+	is_shown = {
+		culture = { has_cultural_pillar = heritage_east_slavic }
+		current_date >= 1080.1.1
+		is_landed = yes
+		OR = {	
+			root.primary_title = title:e_russia
+			root.primary_title = title:k_novgorod
+			primary_title = {
+				OR = { 
+					de_jure_liege = title:k_novgorod
+					de_jure_liege.de_jure_liege = title:k_novgorod
+					de_jure_liege.de_jure_liege.de_jure_liege = title:k_novgorod
+				}
+			}
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:northern_expansion_decision
+			}
+		}
+	}
+	
+	is_valid = {
+		OR = {	#Government conditions.
+			has_government = feudal_government
+			has_government = republic_government
+			has_government = clan_government
+		} 
+		is_independent_ruler = yes
+		faith = { religion_tag = christianity_religion }
+	}	
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			destroy_title = title:k_bjarmaland
+			title:c_akkel = { set_de_jure_liege_title = title:d_guoldat }
+			title:c_koutajoki = { set_de_jure_liege_title = title:d_guoldat }
+			title:d_novgorod = { set_de_jure_liege_title = title:k_novgorod }
+			title:d_luki = { set_de_jure_liege_title = title:k_novgorod }
+			title:d_vepsia = { set_de_jure_liege_title = title:k_novgorod }
+			title:d_nizhny_novgorod = { set_de_jure_liege_title = title:k_opolye }
+			add_pressed_claim = title:d_novgorod
+			add_pressed_claim = title:d_luki
+			add_pressed_claim = title:d_vepsia
+			add_pressed_claim = title:d_vologda
+			add_pressed_claim = title:d_chudia
+			add_pressed_claim = title:d_ustyug
+			add_pressed_claim = title:d_biarmia
+			add_pressed_claim = title:d_karelia
+			add_pressed_claim = title:d_guoldat
+		}
+		title:d_vologda = { set_de_jure_liege_title = title:k_novgorod }
+		title:d_chudia = { set_de_jure_liege_title = title:k_novgorod }
+		title:d_ustyug = { set_de_jure_liege_title = title:k_novgorod }
+		title:d_biarmia = { set_de_jure_liege_title = title:k_novgorod }
+		title:d_karelia = { set_de_jure_liege_title = title:k_novgorod }
+		title:d_guoldat = { set_de_jure_liege_title = title:k_novgorod }
+		add_prestige = 3000
+		add_gold = 2000
+		add_piety = 2000
+		add_trait = conqueror
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:northern_expansion_decision
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = no
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			save_scope_as = great_novgorod
+			create_title_and_vassal_change = {
+				type = conquest
+				save_scope_as = title_change
+				add_claim_on_loss = no
+			}
+			title:d_novgorod = {
+				every_in_de_jure_hierarchy = {
+					change_title_holder = {
+						holder = scope:great_novgorod
+						change = scope:title_change
+					}
+				}
+			}
+			title:d_vepsia = {
+				every_in_de_jure_hierarchy = {
+					change_title_holder = {
+						holder = scope:great_novgorod
+						change = scope:title_change
+					}
+				}
+			}
+			title:d_luki = {
+				every_in_de_jure_hierarchy = {
+					change_title_holder = {
+						holder = scope:great_novgorod
+						change = scope:title_change
+					}
+				}
+			}
+			if = {
+				limit = { is_ai = yes }
+				title:d_vologda = {
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+							holder = scope:great_novgorod
+							change = scope:title_change
+						}
+					}
+				}
+				title:d_ustyug = {
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+							holder = scope:great_novgorod
+							change = scope:title_change
+						}
+					}
+				} 
+			}
+			resolve_title_and_vassal_change = scope:title_change
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+		modifier = {
+			factor = 0
+			age > 35
+			sub_realm_size >= 20
+		}
+	}
+}
+
+establish_russian_culture_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+
+	ai_check_interval = 48
+
+	desc = establish_russian_culture_decision_desc
+	selection_tooltip = establish_russian_culture_decision_tooltip
+
+	is_shown = {
+		culture = culture:norse
+		any_sub_realm_county = {
+			target_is_de_jure_liege_or_above = title:e_russia
+			culture = { has_cultural_pillar = heritage_east_slavic }
+		}
+		NOT = {	
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_established_russian_culture_decision
+			}
+		}
+	}
+
+	is_valid = {
+		culture = culture:norse
+		NOT = { culture = capital_province.culture }
+		culture = {
+			cultural_acceptance = { target = root.capital_province.culture value >= 20 }
+		}
+		is_independent_ruler = yes
+		prestige_level >= 2
+		# TODO Find a way to get the AI cheat working without having to reimplement message
+		#custom_tooltip = {
+		#	text = MY_PRESTIGE_LEVEL_IS_AT_LEAST
+		#	OR = {
+		#		is_ai = yes
+		#		prestige_level >= 3 # High Prestige level to make it a bit more challenging
+		#	}
+		#}
+	}
+
+	is_valid_showing_failures_only = {
+		is_at_war = no
+		is_imprisoned = no
+	}
+
+	effect = {
+		hidden_effect = {
+			# Generate a list of counties we want to flip to the new culture.
+			every_sub_realm_title = {
+				limit = {
+					tier = tier_county
+				}
+				if = {
+					limit = {
+						title_province = { geographical_region = ghw_region_russia }
+						OR = {
+							culture = { has_cultural_pillar = heritage_north_germanic }
+							culture = { has_cultural_pillar = heritage_east_slavic }
+						}
+					}
+
+					add_to_list = russian_counties
+				}
+			}
+
+			# Generate a list of neighbouring rulers that may convert as well
+			every_independent_ruler = {
+				limit = {
+					capital_province = { geographical_region = ghw_region_russia }
+				}
+				if = {
+					limit = {
+						is_ai = yes # The player will have its own choice
+						is_independent_ruler = yes
+						is_landed = yes
+						NOT = { this = root }
+						OR = {
+							culture = { has_cultural_pillar = heritage_east_slavic }
+							culture = { has_cultural_pillar = heritage_north_germanic }
+						}
+						opinion = {
+							target = root
+							value >= high_positive_opinion # 60
+						}
+						in_diplomatic_range = root
+					}
+
+					add_to_list = convertible_neighbours
+				}
+			}
+
+			# Set the scopes for later
+			save_scope_as = russian_founder
+			culture = { save_scope_as = old_culture_1 }
+			capital_province.culture = { save_scope_as = old_culture_2 }
+
+			# Create the culture
+			culture:russian = {
+				reset_culture_creation_date = yes
+				get_all_innovations_from = scope:old_culture_1
+				get_all_innovations_from = scope:old_culture_2
+				save_scope_as = new_culture
+			}
+
+			# Perform the culture flip.
+			every_in_list = {
+				list = russian_counties
+				merge_culture_with_cultural_heritage_in_region_effect = {
+					OLD_CULTURAL_HERITAGE = heritage_east_slavic
+					OLD_CULTURE = culture:norse
+					NEW_CULTURE = culture:russian
+					REGION = ghw_region_russia
+				}
+			}
+
+			# Send all players in the game a notification event about the flip.
+			every_player = {
+				if = {
+					limit = {
+						NOT = { this = root }
+						OR = {
+							culture = { has_cultural_pillar = heritage_north_germanic }
+							culture = { has_cultural_pillar = heritage_east_slavic }
+						}
+						exists = capital_province
+						capital_province = { geographical_region = ghw_region_russia }
+					}
+					trigger_event = smi_russia.3002
+				}
+				else_if = {
+					limit = { this = root }
+					trigger_event = smi_russia.3003
+				}
+				else_if = {
+					limit = {
+						exists = capital_province
+						capital_province = { geographical_region = world_europe }
+						is_within_diplo_range = { CHARACTER = scope:russian_founder }
+					}
+					trigger_event = smi_russia.3005
+				}
+			}
+		}
+
+		# Player changes culture
+		set_culture = culture:russian
+		add_character_flag = converted_culture_this_lifetime
+		hidden_effect = {
+			every_in_list = {
+				list = russian_counties
+				limit = {
+					holder.capital_county = { is_in_list = russian_counties }
+				}
+				holder = {
+					add_to_list = mass_melting_pot_list
+					every_courtier = { add_to_list = mass_melting_pot_list }
+					every_courtier_away = { add_to_list = mass_melting_pot_list }
+				}
+				every_in_list = {
+					list = mass_melting_pot_list
+					limit = {
+						OR = {
+							culture = { has_cultural_pillar = heritage_east_slavic }
+							culture = { has_cultural_pillar = heritage_north_germanic }
+						}
+					}
+					set_culture = culture:russian
+				}
+			}
+		}
+
+		# Closeby scandinavian and east slavic rulers in Russia that likes the founder convert as well
+		# Note: their court and counties will not
+		hidden_effect = {
+			every_in_list = {
+				list = convertible_neighbours
+				
+				convert_family_culture_and_notify_vassals_effect = {
+					CONVERTER = this
+					OLD_CULTURE = this.culture
+					NEW_CULTURE = culture:russian
+				}
+
+				capital_county = { set_county_culture = culture:russian }
+			}
+		}
+
+		# Summary of above hidden effects to inform players of the decision's impact.
+		show_as_tooltip = {
+			custom_tooltip = establish_russian_culture_decision_effect.tt
+			culture:russian = {
+				get_all_innovations_from = scope:old_culture_1
+				get_all_innovations_from = scope:old_culture_2
+			}
+			every_in_list = {
+				list = convertible_neighbours
+				save_scope_as = converting_neighbour
+				custom_tooltip = establish_russian_culture_convert_neighbours_effect.tt
+			}
+		}
+
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:flag_established_russian_culture_decision
+		}
+	}
+
+	cost = {
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 0
+
+		# Biggest incentive is the proportion of east slavic counties in your realm
+		modifier = {
+			add = 50
+			any_sub_realm_county = {
+				percent >= 0.4
+				culture = { has_cultural_pillar = heritage_east_slavic }
+			}
+		}
+
+		# Rurikid dynasty (commonly associated with the birth of the Rus') is incentivised to do it as well
+		modifier = {
+			add = 10
+			dynasty = 705
+		}
+
+		# Prestige influences AI probability to do it
+		modifier = {
+			add = 10
+			prestige_level >= 2
+		}
+		modifier = {
+			add = 30
+			prestige_level >= 3
+		}
+
+		# Discourage before a few years have passed
+		modifier = {
+			add = -20
+			current_date <= 880.1.1
+		}
+
+		# After chosen date for russian creation, please do it
+		modifier = {
+			add = 50
+			current_date >= 890.6.5
+		}
+
+		# Favor established rulers, not freshly arrived adventurers
+		modifier = {
+			add = -50
+			has_trait = adventurer
+		}
+	}
+}
+historical_russian_culture_conversion_decision = {
+	
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	
+	major = no
+	
+	#ai_goal = yes
+	
+	ai_check_interval = 10
+	
+    desc = historical_russian_culture_conversion_decision_desc
+	selection_tooltip = historical_russian_culture_conversion_decision_tooltip
+	
+	is_shown = {
+		culture = { has_cultural_pillar = heritage_east_slavic }
+		NOT = { culture = culture:russian }
+		OR = { 
+			has_primary_title = title:k_white_rus 
+			has_primary_title = title:k_ruthenia
+			has_primary_title = title:e_russia
+			primary_title = {
+				OR = {
+					de_jure_liege = title:k_white_rus
+					de_jure_liege.de_jure_liege = title:k_white_rus
+					de_jure_liege.de_jure_liege.de_jure_liege = title:k_white_rus
+					de_jure_liege = title:k_ruthenia
+					de_jure_liege.de_jure_liege = title:k_ruthenia
+					de_jure_liege.de_jure_liege.de_jure_liege = title:k_ruthenia
+					de_jure_liege = title:e_ruthenia
+					de_jure_liege.de_jure_liege = title:e_ruthenia
+					de_jure_liege.de_jure_liege.de_jure_liege = title:e_russia
+				}
+			}
+		}
+	}
+	
+	is_valid = {
+		is_available_adult = yes
+	}
+	
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_capable_adult = yes
+	}
+	
+	effect = {
+		set_culture = culture:russian
+		hidden_effect = {
+			every_close_family_member = {
+				limit = { 
+					in_diplomatic_range = root
+					is_landed = no
+				}
+				set_culture = culture:russian
+			}
+		}
+    }
+	
+	cost = {
+		prestige = 100
+	}
+
+	ai_will_do = {
+		base = 66
+	}
+}
+
+lithuanian_expansion_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+
+	desc = lithuanian_expansion_decision_desc
+	selection_tooltip = lithuanian_expansion_decision_tooltip
+	major = yes
+	
+	ai_check_interval = 1
+	is_shown = {
+		current_date >= 1350.1.1
+		is_landed = yes
+		NOT = { culture = { has_cultural_pillar = heritage_east_slavic } }
+		trigger_if = {
+			limit = {
+				NOT = { exists = title:k_lithuania.holder }
+			}
+			primary_title = {
+				OR = {
+					de_jure_liege = title:k_lithuania
+					de_jure_liege.de_jure_liege = title:k_lithuania
+					de_jure_liege.de_jure_liege.de_jure_liege = title:k_lithuania
+				}
+			}
+		}
+		trigger_else = {
+			has_primary_title = title:k_lithuania
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:lithuanian_expansion_decision
+			}
+		}
+	}
+	
+	is_valid = {
+		is_independent_ruler = yes
+		sub_realm_size > 30
+	}	
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			add_pressed_claim = title:k_polotsk
+			add_pressed_claim = title:k_white_rus
+			add_pressed_claim = title:k_galicia-volhynia
+			add_pressed_claim = title:k_kievan_rus
+			add_pressed_claim = title:k_ruthenia
+			add_pressed_claim = title:d_grodno
+			add_pressed_claim = title:d_volhynia
+			add_pressed_claim = title:d_kiev
+			add_pressed_claim = title:d_turov
+			add_pressed_claim = title:d_pinsk
+			add_pressed_claim = title:d_minsk
+			add_pressed_claim = title:d_polotsk
+			add_pressed_claim = title:d_smolensk
+			add_pressed_claim = title:d_karachev
+			add_pressed_claim = title:d_chernigov
+			add_pressed_claim = title:d_pereyaslavl
+			add_pressed_claim = title:d_yedisan
+			create_title_and_vassal_change = {
+				type = created
+				save_scope_as = title_change
+				add_claim_on_loss = no
+			}
+			title:k_lithuania = {
+				change_title_holder = {
+					holder = root
+					change = scope:title_change
+				}
+			}
+			resolve_title_and_vassal_change = scope:title_change
+			set_primary_title_to = title:k_lithuania
+		}
+		add_prestige = 9000
+		add_gold = 8000
+		add_piety = 8000
+		add_trait = conqueror
+		hidden_effect = {
+	        if = {
+	        	limit = { has_government = clan_government }
+	        	change_government = feudal_government
+	        }
+			set_culture = culture:lithuanian
+			every_close_family_member = {
+				limit = { 
+					in_diplomatic_range = root
+					is_landed = no
+				}
+				set_culture = culture:lithuanian
+				set_character_faith_with_conversion = faith:catholic
+		        if = {
+		        	limit = { has_government = clan_government }
+		        	change_government = feudal_government
+		        }
+			}
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:lithuanian_expansion_decision
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 3000
+				location = capital_province
+				inheritable = yes
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+		modifier = {
+			factor = 0
+			age > 35
+		}
+	}
+}
+
+establish_russian_culture_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+
+	ai_check_interval = 48
+
+	desc = establish_russian_culture_decision_desc
+	selection_tooltip = establish_russian_culture_decision_tooltip
+
+	is_shown = {
+		culture = culture:norse
+		any_sub_realm_county = {
+			target_is_de_jure_liege_or_above = title:e_russia
+			culture = { has_cultural_pillar = heritage_east_slavic }
+		}
+		NOT = {	
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_established_russian_culture_decision
+			}
+		}
+	}
+
+	is_valid = {
+		culture = culture:norse
+		NOT = { culture = capital_province.culture }
+		culture = {
+			cultural_acceptance = { target = root.capital_province.culture value >= 20 }
+		}
+		is_independent_ruler = yes
+		prestige_level >= 2
+		# TODO Find a way to get the AI cheat working without having to reimplement message
+		#custom_tooltip = {
+		#	text = MY_PRESTIGE_LEVEL_IS_AT_LEAST
+		#	OR = {
+		#		is_ai = yes
+		#		prestige_level >= 3 # High Prestige level to make it a bit more challenging
+		#	}
+		#}
+	}
+
+	is_valid_showing_failures_only = {
+		is_at_war = no
+		is_imprisoned = no
+	}
+
+	effect = {
+		hidden_effect = {
+			# Generate a list of counties we want to flip to the new culture.
+			every_sub_realm_title = {
+				limit = {
+					tier = tier_county
+				}
+				if = {
+					limit = {
+						title_province = { geographical_region = ghw_region_russia }
+						OR = {
+							culture = { has_cultural_pillar = heritage_north_germanic }
+							culture = { has_cultural_pillar = heritage_east_slavic }
+						}
+					}
+
+					add_to_list = russian_counties
+				}
+			}
+
+			# Generate a list of neighbouring rulers that may convert as well
+			every_independent_ruler = {
+				limit = {
+					capital_province = { geographical_region = ghw_region_russia }
+				}
+				if = {
+					limit = {
+						is_ai = yes # The player will have its own choice
+						is_independent_ruler = yes
+						is_landed = yes
+						NOT = { this = root }
+						OR = {
+							culture = { has_cultural_pillar = heritage_east_slavic }
+							culture = { has_cultural_pillar = heritage_north_germanic }
+						}
+						opinion = {
+							target = root
+							value >= high_positive_opinion # 60
+						}
+						in_diplomatic_range = root
+					}
+
+					add_to_list = convertible_neighbours
+				}
+			}
+
+			# Set the scopes for later
+			save_scope_as = russian_founder
+			culture = { save_scope_as = old_culture_1 }
+			capital_province.culture = { save_scope_as = old_culture_2 }
+
+			# Create the culture
+			culture:russian = {
+				reset_culture_creation_date = yes
+				get_all_innovations_from = scope:old_culture_1
+				get_all_innovations_from = scope:old_culture_2
+				save_scope_as = new_culture
+			}
+
+			# Perform the culture flip.
+			every_in_list = {
+				list = russian_counties
+				merge_culture_with_cultural_heritage_in_region_effect = {
+					OLD_CULTURAL_HERITAGE = heritage_east_slavic
+					OLD_CULTURE = culture:norse
+					NEW_CULTURE = culture:russian
+					REGION = ghw_region_russia
+				}
+			}
+
+			# Send all players in the game a notification event about the flip.
+			every_player = {
+				if = {
+					limit = {
+						NOT = { this = root }
+						OR = {
+							culture = { has_cultural_pillar = heritage_north_germanic }
+							culture = { has_cultural_pillar = heritage_east_slavic }
+						}
+						exists = capital_province
+						capital_province = { geographical_region = ghw_region_russia }
+					}
+					trigger_event = smi_russia.3002
+				}
+				else_if = {
+					limit = { this = root }
+					trigger_event = smi_russia.3003
+				}
+				else_if = {
+					limit = {
+						exists = capital_province
+						capital_province = { geographical_region = world_europe }
+						is_within_diplo_range = { CHARACTER = scope:russian_founder }
+					}
+					trigger_event = smi_russia.3005
+				}
+			}
+		}
+
+		# Player changes culture
+		set_culture = culture:russian
+		add_character_flag = converted_culture_this_lifetime
+		hidden_effect = {
+			every_in_list = {
+				list = russian_counties
+				limit = {
+					holder.capital_county = { is_in_list = russian_counties }
+				}
+				holder = {
+					add_to_list = mass_melting_pot_list
+					every_courtier = { add_to_list = mass_melting_pot_list }
+					every_courtier_away = { add_to_list = mass_melting_pot_list }
+				}
+				every_in_list = {
+					list = mass_melting_pot_list
+					limit = {
+						OR = {
+							culture = { has_cultural_pillar = heritage_east_slavic }
+							culture = { has_cultural_pillar = heritage_north_germanic }
+						}
+					}
+					set_culture = culture:russian
+				}
+			}
+		}
+
+		# Closeby scandinavian and east slavic rulers in Russia that likes the founder convert as well
+		# Note: their court and counties will not
+		hidden_effect = {
+			every_in_list = {
+				list = convertible_neighbours
+				
+				convert_family_culture_and_notify_vassals_effect = {
+					CONVERTER = this
+					OLD_CULTURE = this.culture
+					NEW_CULTURE = culture:russian
+				}
+
+				capital_county = { set_county_culture = culture:russian }
+			}
+		}
+
+		# Summary of above hidden effects to inform players of the decision's impact.
+		show_as_tooltip = {
+			custom_tooltip = establish_russian_culture_decision_effect.tt
+			culture:russian = {
+				get_all_innovations_from = scope:old_culture_1
+				get_all_innovations_from = scope:old_culture_2
+			}
+			every_in_list = {
+				list = convertible_neighbours
+				save_scope_as = converting_neighbour
+				custom_tooltip = establish_russian_culture_convert_neighbours_effect.tt
+			}
+		}
+
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:flag_established_russian_culture_decision
+		}
+	}
+
+	cost = {
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 0
+
+		# Biggest incentive is the proportion of east slavic counties in your realm
+		modifier = {
+			add = 50
+			any_sub_realm_county = {
+				percent >= 0.4
+				culture = { has_cultural_pillar = heritage_east_slavic }
+			}
+		}
+
+		# Rurikid dynasty (commonly associated with the birth of the Rus') is incentivised to do it as well
+		modifier = {
+			add = 10
+			dynasty = 705
+		}
+
+		# Prestige influences AI probability to do it
+		modifier = {
+			add = 10
+			prestige_level >= 2
+		}
+		modifier = {
+			add = 30
+			prestige_level >= 3
+		}
+
+		# Discourage before a few years have passed
+		modifier = {
+			add = -20
+			current_date <= 880.1.1
+		}
+
+		# After chosen date for russian creation, please do it
+		modifier = {
+			add = 50
+			current_date >= 890.6.5
+		}
+
+		# Favor established rulers, not freshly arrived adventurers
+		modifier = {
+			add = -50
+			has_trait = adventurer
+		}
+	}
+}
+
+unite_the_eastern_slavs_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+	ai_check_interval = 120
+	desc = unite_the_eastern_slavs_decision_desc
+
+	is_shown = {
+		game_start_date < 890.6.5
+		culture = { has_cultural_pillar = heritage_east_slavic }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:unite_the_eastern_slavs_decision
+			}
+		}
+	}
+
+	is_valid = {
+		culture = { has_cultural_pillar = heritage_east_slavic }
+		# No custom region for the time being
+		AND = {
+			completely_controls = title:k_galicia-volhynia
+			completely_controls = title:k_moldavia
+			completely_controls = title:k_novgorod
+			completely_controls = title:k_ruthenia
+			completely_controls = title:k_white_rus
+		}
+		OR = {
+			has_primary_title = title:k_galicia-volhynia
+			has_primary_title = title:k_moldavia
+			has_primary_title = title:k_novgorod
+			has_primary_title = title:k_ruthenia
+			has_primary_title = title:k_white_rus
+		}
+	}
+
+	effect = {
+		save_scope_as = eastern_slav_uniter
+
+		show_as_tooltip = { unite_the_eastern_slavs_decision_effects = yes } #Actually applied in smi_russia.0006 - prestige, laws, title, innovation effects
+
+		#Events
+		trigger_event = smi_russia.0005
+		every_player = {
+			limit = {
+				NOT = { this = scope:eastern_slav_uniter }
+				is_within_diplo_range = { CHARACTER = scope:eastern_slav_uniter }
+			}
+			trigger_event = smi_russia.0006
+		}
+
+		#Can only be done once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:unite_the_eastern_slavs_decision
+		}
+		set_global_variable = {
+			name = unite_the_eastern_slavs_decision
+			value = scope:eastern_slav_uniter
+		}
+		set_global_variable = {
+			name = unite_the_eastern_slavs_decision_title
+			value = scope:eastern_slav_uniter.primary_title
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+historical_orthodox_rus_conversion_decision = {
+	
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	
+	major = yes
+	
+	ai_goal = no
+	
+	ai_check_interval = 12
+	desc = historical_orthodox_rus_conversion_decision_desc
+	selection_tooltip = historical_orthodox_rus_conversion_decision_tooltip
+	confirm_text = historical_orthodox_rus_conversion_decision_confirm
+	
+	
+	is_shown = {
+		is_ruler = yes
+		culture = culture:russian
+		NOT = { religion = religion:christianity_religion } 
+		religion:slavic_religion = {
+			any_faith = {
+				count = all
+				has_doctrine = unreformed_faith_doctrine
+			}
+		}
+	}
+	
+	is_valid = {
+		is_independent_ruler = yes
+	}
+	
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+		is_capable_adult = yes
+	}
+	
+	effect = {
+        set_character_faith_with_conversion = faith:orthodox
+        if = {
+        	limit = { has_government = clan_government }
+        	change_government = feudal_government
+        }
+		hidden_effect = {
+			primary_title = {
+				every_in_de_facto_hierarchy = {
+					if = {
+						limit = { development_level < 4 }
+						change_development_level = 3
+					}
+				}
+			}
+		}
+    }
+	
+	cost = {
+		piety = 500
+		gold = 100
+	}
+
+	ai_potential = {
+		current_date >= 988.1.1
+		#always = yes
+	}
+
+	ai_will_do = {
+		base = 33
+		modifier = {
+			factor = 0
+			has_faith = faith:catholic
+			current_date < 988.1.1
+		}
+	} 
+}
+
+historical_orthodox_eastslavs_conversion_decision = {
+	
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	
+	major = yes
+	
+	ai_goal = no
+	
+	ai_check_interval = 12
+	desc = historical_orthodox_eastslavs_conversion_decision_desc
+	selection_tooltip = historical_orthodox_eastslavs_conversion_decision_tooltip
+	confirm_text = historical_orthodox_eastslavs_conversion_decision_confirm
+	
+	is_shown = {
+		is_ruler = yes
+		culture = { has_cultural_pillar = heritage_east_slavic }
+		NOT = { 
+			religion = religion:christianity_religion 
+			culture = culture:russian
+		}
+		#Slavic Paganism must not have been reformed.
+		religion:slavic_religion = {
+			any_faith = {
+				count = all
+				has_doctrine = unreformed_faith_doctrine
+			}
+		}
+	}
+	
+	is_valid = {
+		is_independent_ruler = yes
+	}
+	
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+		is_capable_adult = yes
+	}
+	
+	effect = {
+        set_character_faith_with_conversion = faith:orthodox
+    }
+	
+	cost = {
+		piety = 500
+		gold = 100
+	}
+
+	ai_potential = {
+		current_date >= 988.1.1
+		#always = yes
+	}
+
+	ai_will_do = {
+		base = 33
+	}
+}
+
+historical_russian_culture_conversion_decision = {
+	
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	
+	major = no
+	
+	#ai_goal = yes
+	
+	ai_check_interval = 10
+	
+    desc = historical_russian_culture_conversion_decision_desc
+	selection_tooltip = historical_russian_culture_conversion_decision_tooltip
+	
+	is_shown = {
+		NOT = { culture = { has_cultural_pillar = heritage_east_slavic } }
+		OR = {
+			has_primary_title = title:k_ruthenia
+			has_primary_title = title:e_russia
+		}
+	}
+	
+	is_valid = {
+		is_available_adult = yes
+	}
+	
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_capable_adult = yes
+	}
+	
+	effect = {
+		set_culture = culture:russian
+		hidden_effect = {
+			every_close_family_member = {
+				limit = { 
+					in_diplomatic_range = root
+					is_landed = no
+				}
+				set_culture = culture:russian
+			}
+		}
+    }
+	
+	cost = {
+		prestige = 100
+	}
+
+	ai_will_do = {
+		base = 66
+	}
+}
+
+expand_galych_volhynia_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	major = yes
+
+	ai_check_interval = 120
+
+	desc = expand_galych_volhynia_decision_desc
+	selection_tooltip = expand_galych_volhynia_decision_tooltip
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty # Everyone should have a dynasty, but in case they don't...
+		OR = {
+			has_title = title:k_galicia-volhynia
+			has_title = title:d_halych
+			has_title = title:d_volhynia
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_expanded_galych_volhynia
+			}
+			OR = {
+				has_title = title:e_russia
+				has_title = title:k_ruthenia
+			}
+		}
+		OR = {	
+			has_government = tribal_government
+			has_government = feudal_government
+		}
+		highest_held_title_tier >= tier_duchy
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		completely_controls = title:k_galicia-volhynia
+		completely_controls = title:d_kiev
+		completely_controls = title:d_turov
+		completely_controls = title:d_pinsk
+		completely_controls = title:d_grodno
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			expand_galych_volhynia_scripted_effect = yes
+		}
+		save_scope_as = founder
+		trigger_event = {
+			id = expand_galych_volhynia.0001
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_expanded_galych_volhynia
+			}
+		}
+	}
+
+	cost = {
+		gold = 300
+		prestige = 200
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+create_grand_principality_of_moscow_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+
+	ai_check_interval = 120
+
+	desc = create_grand_principality_of_moscow_decision_desc
+	selection_tooltip = create_grand_principality_of_moscow_decision_tooltip
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty 
+		AND = {
+			has_title = title:d_opolye
+			capital_county = title:c_moskva
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_created_grand_principality_of_moscow
+			}
+			OR = {
+				has_title = title:e_russia
+				has_title = title:e_volga-ural
+			}
+		}
+		OR = {	
+			has_government = tribal_government
+			has_government = feudal_government
+		}
+		highest_held_title_tier >= tier_duchy
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		has_title = title:k_opolye
+		completely_controls = title:c_moskva
+		completely_controls = title:k_opolye
+		completely_controls = title:d_vologda
+		completely_controls = title:d_nizhny_novgorod
+		completely_controls = title:d_ryazan
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			create_grand_principality_of_moscow_scripted_effect = yes
+		}
+		save_scope_as = founder
+		trigger_event = {
+			id = create_grand_principality_of_moscow.0001
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_created_grand_principality_of_moscow
+			}
+		}
+	}
+
+	cost = {
+		gold = 300
+		prestige = 200
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+create_russian_empire_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	major = yes
+
+	ai_check_interval = 120
+
+	desc = create_russian_empire_decision_desc
+	selection_tooltip = create_russian_empire_decision_tooltip
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		exists = dynasty 
+		has_title = title:k_opolye
+		NOT = {	
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_created_russian_empire
+			}
+			OR = {
+				has_title = title:e_russia
+			}
+		}
+		OR = {	
+			has_government = tribal_government
+			has_government = feudal_government
+		}
+		highest_held_title_tier >= tier_kingdom
+		capital_county = title:c_moskva
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		completely_controls = title:k_opolye
+		completely_controls = title:e_volga-ural
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			create_russian_empire_scripted_effect = yes
+		}
+		save_scope_as = founder
+		trigger_event = {
+			id = create_russian_empire.0001
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_created_russian_empire
+			}
+		}
+	}
+
+	cost = {
+		gold = 500
+		prestige = 300
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+
+unite_church_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+	major = yes
+
+	ai_check_interval = 120
+
+	desc = unite_church_decision_desc
+	selection_tooltip = unite_church_decision_tooltip
+
+	is_shown = { 
+		is_landed = yes
+		exists = dynasty
+		capital = {
+			OR = {
+				geographical_region = world_europe_east
+				geographical_region = world_europe_south_east
+			}
+		}
+		
+		OR = {
+			AND = {
+				faith = faith:orthodox
+				any_directly_owned_province = {
+					faith = faith:catholic 
+				} 
+				any_close_family_member = {
+					faith = faith:catholic 
+				} 
+			}
+			AND = {
+				faith = faith:catholic
+				any_directly_owned_province = {
+					faith = faith:orthodox
+				} 
+				any_close_family_member = {
+					faith = faith:orthodox 
+				}  
+			}
+		}
+		highest_held_title_tier >= tier_duchy 
+		trigger_if = {
+			limit = { exists = faith.religious_head }
+			NOT = { this = faith.religious_head }
+		} 
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:united_church
+			}
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		piety_level >= medium_piety_level
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_at_peace_adult = yes
+	}
+
+	effect = { 
+		save_scope_as = religious_leader
+		faith = { save_scope_as = old_faith }
+		faith:greek_catholic = { save_scope_as = greek_catholic_faith }
+		faith:greek_catholic.religious_head = { save_scope_as = pope }
+
+		show_as_tooltip = {
+			unite_church_scripted_effect = yes
+		} 
+		trigger_event = unite_church.0001
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:united_church
+			}
+		}
+	}
+
+	cost = {
+		piety = 300
+		prestige = 200
+	}
+
 	ai_potential = {
 		always = yes
 	}

@@ -1,0 +1,23 @@
+﻿on_game_start_after_lobby = {
+	
+	on_actions = {
+		smi_russia_increase_cultural_acceptance_action
+	}
+}
+
+smi_russia_increase_cultural_acceptance_action = {
+	effect = {
+		culture:norse = {
+			change_cultural_acceptance = {
+				target = culture:ilmenian
+				value = 25 # The ilmenian called a Norse prince (Rurik) to rule over them and bring peace
+				desc = cultural_acceptance_historical_relations
+			}
+			change_cultural_acceptance = {
+				target = culture:volhynian
+				value = 5
+				desc = cultural_acceptance_historical_relations
+			}
+		}
+	}
+}

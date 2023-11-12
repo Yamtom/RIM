@@ -1,0 +1,93 @@
+﻿convert_county_from_cultural_heritage_and_holder_if_in_region_effect = {
+	if = {
+		# If this county culture has the old cultural heritage and is in the designated region, flip it to the new culture.
+		limit = {
+            culture = { has_cultural_pillar = $OLD_CULTURAL_HERITAGE$ }
+			title_province = {
+				geographical_region = $REGION$
+			}
+		}
+		set_county_culture = $NEW_CULTURE$
+
+		# If the holder is also of the old culture group, and their capital is in the designated region, we flip them along with the county.
+		holder = {
+			if = {
+				limit = {
+                    culture = { has_cultural_pillar = $OLD_CULTURAL_HERITAGE$ }
+					capital_province = {
+						geographical_region = $REGION$
+					}
+				}
+				set_culture = $NEW_CULTURE$
+			}
+		}
+	}
+}
+
+merge_culture_with_cultural_heritage_in_region_effect = {
+	hidden_effect = {
+		convert_county_from_cultural_heritage_and_holder_if_in_region_effect = {
+			OLD_CULTURAL_HERITAGE = $OLD_CULTURAL_HERITAGE$
+			NEW_CULTURE = $NEW_CULTURE$
+			REGION = $REGION$
+		}
+		convert_county_and_holder_if_in_region_effect = {
+			OLD_CULTURE = $OLD_CULTURE$
+			NEW_CULTURE = $NEW_CULTURE$
+			REGION = $REGION$
+		}
+	}
+}
+
+merge_cultural_heritages_in_region_effect = {
+	hidden_effect = {
+		convert_county_from_cultural_heritage_and_holder_if_in_region_effect = {
+			OLD_CULTURAL_HERITAGE = $OLD_CULTURAL_HERITAGE_1$
+			NEW_CULTURE = $NEW_CULTURE$
+			REGION = $REGION$
+		}
+		convert_county_from_cultural_heritage_and_holder_if_in_region_effect = {
+			OLD_CULTURAL_HERITAGE = $OLD_CULTURAL_HERITAGE_2$
+			NEW_CULTURE = $NEW_CULTURE$
+			REGION = $REGION$
+		}
+	}
+}
+
+unite_the_eastern_slavs_decision_effects = {
+	#Prestige
+	add_prestige = massive_prestige_gain
+
+	#Innovations
+	culture = {
+		add_random_innovation = culture_group_military
+		add_random_innovation = culture_group_civic
+	}
+
+	#Handle de jure drift & destructions of other kingdom titles
+	title:k_galicia-volhynia = { add_to_list = east_slavic_kingdoms }
+	title:k_moldavia = { add_to_list = east_slavic_kingdoms }
+	title:k_novgorod = { add_to_list = east_slavic_kingdoms }
+	title:k_ruthenia = { add_to_list = east_slavic_kingdoms }
+	title:k_white_rus = { add_to_list = east_slavic_kingdoms }
+
+	custom_tooltip = unite_the_eastern_slavs_decision_titles_tt
+	hidden_effect = {
+		every_in_list = {
+			list = east_slavic_kingdoms
+			limit = {
+				NOT = { this = scope:eastern_slav_uniter.primary_title }
+				scope:eastern_slav_uniter = { completely_controls = prev }
+			}
+
+			#De jure shift all held west slavic titles into your primary title
+			every_in_de_jure_hierarchy = {
+				limit = { tier = tier_duchy }
+				set_de_jure_liege_title = scope:eastern_slav_uniter.primary_title
+			}
+
+			#Destroys them all!
+			scope:eastern_slav_uniter = { destroy_title = prev }
+		}
+	}
+}
