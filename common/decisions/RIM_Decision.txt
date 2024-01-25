@@ -1581,6 +1581,7 @@ create_grand_principality_of_moscow_decision = {
 }
 
 create_russian_empire_decision = {
+
 	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
 	major = yes
 
@@ -1650,7 +1651,6 @@ create_russian_empire_decision = {
 		base = 100
 	}
 }
-
 
 unite_church_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"

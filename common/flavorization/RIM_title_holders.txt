@@ -1,6 +1,6 @@
 ﻿
 # Rus
- 
+
 baron_feudal_male_rus = {
 	type = character
 	gender = male
@@ -775,8 +775,7 @@ king_feudal_female_bulgarian = {
 	name_lists = { name_list_bulgarian }
 }
 kingdom_feudal_bulgarian = {
-	type = title
-	gender = 
+	type = title 
 	special = holder
 	tier = kingdom
 	priority = 47
@@ -803,7 +802,6 @@ count_feudal_female_serbian = {
 }
 county_feudal_serbian = {
 	type = title
-	gender = 
 	special = holder
 	tier = county
 	priority = 17
@@ -830,7 +828,6 @@ duke_feudal_female_serbian = {
 }
 duchy_feudal_serbian = {
 	type = title
-	gender = 
 	special = holder
 	tier = duchy
 	priority = 28
@@ -857,7 +854,6 @@ duke_feudal_female_vlach = {
 }
 duchy_feudal_vlach = {
 	type = title
-	gender = 
 	special = holder
 	tier = duchy
 	priority = 28
@@ -884,7 +880,6 @@ king_feudal_female_vlach = {
 }
 kingdom_feudal_vlach = {
 	type = title
-	gender = 
 	special = holder
 	tier = kingdom
 	priority = 47
@@ -911,7 +906,6 @@ count_feudal_female_croatian = {
 }
 county_feudal_croatian = {
 	type = title
-	gender = 
 	special = holder
 	tier = county
 	priority = 17
@@ -938,7 +932,6 @@ king_feudal_female_polish = {
 }
 kingdom_feudal_polish = {
 	type = title
-	gender = 
 	special = holder
 	tier = kingdom
 	priority = 47
@@ -965,7 +958,6 @@ duke_feudal_female_polish = {
 }
 duchy_feudal_polish = {
 	type = title
-	gender = 
 	special = holder
 	tier = duchy
 	priority = 28
@@ -994,7 +986,6 @@ count_feudal_female_polish = {
 }
 county_feudal_polish = {
 	type = title
-	gender = 
 	special = holder
 	tier = county
 	priority = 17
@@ -1021,7 +1012,6 @@ king_feudal_female_czech = {
 }
 kingdom_feudal_czech = {
 	type = title
-	gender = 
 	special = holder
 	tier = kingdom
 	priority = 47
@@ -1048,7 +1038,6 @@ duke_feudal_female_czech = {
 }
 duchy_feudal_czech = {
 	type = title
-	gender = 
 	special = holder
 	tier = duchy
 	priority = 28
@@ -1075,7 +1064,6 @@ count_feudal_female_czech = {
 }
 county_feudal_czech = {
 	type = title
-	gender = 
 	special = holder
 	tier = county
 	priority = 17
@@ -1102,7 +1090,6 @@ king_feudal_female_slovien = {
 }
 kingdom_feudal_slovien = {
 	type = title
-	gender = 
 	special = holder
 	tier = kingdom
 	priority = 47
@@ -1129,7 +1116,6 @@ duke_feudal_female_slovien = {
 }
 duchy_feudal_slovien = {
 	type = title
-	gender = 
 	special = holder
 	tier = duchy
 	priority = 28
@@ -1156,7 +1142,6 @@ count_feudal_female_slovien = {
 }
 county_feudal_slovien = {
 	type = title
-	gender = 
 	special = holder
 	tier = county
 	priority = 17

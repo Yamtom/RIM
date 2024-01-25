@@ -5,5 +5,5 @@ tags={
 	"Historical"
 }
 name="Rus Immersive Mod"
-supported_version="1.11.*"
+supported_version="1.11."
 remote_file_id="2856959890"
